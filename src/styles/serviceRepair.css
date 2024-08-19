@@ -1,0 +1,94 @@
+.service-repair-wrapper {
+    padding: 40px 20px;
+    background: #f9f9f9;
+  }
+  
+  .service-repair-title {
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .service-repair-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .service-repair-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .service-repair-item {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .service-repair-button {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .service-repair-button:hover,
+  .service-repair-button.active {
+    background-color: #ff4d4f;
+    color: #fff;
+  }
+  
+  .arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #333;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-repair-button.active .arrow {
+    transform: rotate(180deg);
+  }
+  
+  .order-repair-button {
+    display: block;
+    background-color: #ff4d4f;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .show-more-container {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .show-more-button {
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+  }
+  

@@ -1,0 +1,111 @@
+.repair-cost-wrapper {
+    padding: 40px 20px;
+    background: #f9f9f9;
+  }
+  
+  .repair-cost-title {
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .repair-cost-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .repair-cost-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .repair-cost-item {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .repair-cost-button {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .repair-cost-button:hover,
+  .repair-cost-button.active {
+    background-color: #ff4d4f;
+    color: #fff;
+  }
+  
+  .arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #333;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .repair-cost-button.active .arrow {
+    transform: rotate(180deg);
+  }
+  
+  .repair-cost-service {
+    font-size: 16px;
+    flex-grow: 1;
+  }
+  
+  .repair-cost-price {
+    font-size: 16px;
+  }
+  
+  .repair-cost-details {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #f5f5f5;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .order-repair-button {
+    display: block;
+    background-color: #ff4d4f;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .show-more-container {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .show-more-button {
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+  }
+  

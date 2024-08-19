@@ -1,0 +1,17 @@
+.footer-wrapper {
+    padding: 40px 20px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .footer-text {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  .footer-link {
+    color: #e74c3c;
+    text-decoration: none;
+  }
+  

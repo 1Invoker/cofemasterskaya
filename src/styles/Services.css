@@ -1,0 +1,74 @@
+.services-wrapper {
+    padding: 60px 20px;
+    background: #fff;
+  }
+  
+  .services-title {
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .services-subtitle {
+    font-size: 16px;
+    text-align: center;
+    color: #777;
+    margin-bottom: 40px;
+  }
+  
+  .services-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .service-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+  }
+  
+  .service-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .service-content {
+    padding: 20px;
+  }
+  
+  .service-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .service-description {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .service-item {
+    margin-bottom: 5px;
+  }
+  
+  .price-button {
+    background-color: #ff4d4f;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+  }

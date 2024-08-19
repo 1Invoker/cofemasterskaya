@@ -1,0 +1,38 @@
+.process-wrapper {
+    padding: 60px 20px;
+    background: #fff;
+  }
+  
+  .process-title {
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .step {
+    background: #f7f7f7;
+    border-radius: 8px;
+    width: 250px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .step-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 10px;
+  }
+  
+  .step-description {
+    font-size: 14px;
+    color: #666;
+  }
