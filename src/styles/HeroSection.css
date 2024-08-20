@@ -1,92 +1,146 @@
 .hero-wrapper {
-    background: #f9f9f9;
-    padding: 60px 20px;
-    text-align: center;
-    position: relative;
-  }
-  
-  .hero-title {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .hero-subtitle {
-    font-size: 18px;
-    color: #777;
-    margin-bottom: 40px;
-  }
-  
-  .offer-box {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-  }
-  
-  .offer-text {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .phone-number-input {
-    width: 70%;
-    padding: 15px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
-    outline: none;
-  }
-  
-  .discount-button {
-    background-color: #ff4d4f;
-    color: #fff;
-    font-size: 16px;
-    padding: 15px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .features-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-  }
-  
-  .feature-item {
-    background-color: white;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    margin: 0 10px;
-    padding: 10px 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 250px;
-  }
-  
-  .feature-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-  }
-  
-  .feature-text {
-    text-align: left;
-  }
-  
-  .feature-title {
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .feature-subtitle {
-    font-size: 12px;
-    color: #777;
-  }
-  
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.offer-box {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  max-width: 520px;
+  margin: 0 auto 40px auto;
+  border: 1px solid #e1e1e1;
+}
+
+.offer-text {
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 1.6;
+  font-family: "TTNorms Medium";
+  opacity: 1;
+}
+
+.phone-number-input {
+  width: calc(100% - 160px);
+  padding: 15px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #d1d1d1;
+  margin-right: 10px;
+  outline: none;
+  background-color: #ffffff;
+  color: #333;
+  display: inline-block;
+  box-shadow: none;
+}
+
+.phone-number-input::placeholder {
+  color: #b1b1b1;
+  font-size: 16px;
+}
+
+.discount-button {
+  background-color: #CC2618;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 15px 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.discount-button:hover {
+  background-color: #CC2618;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.features-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.svgwrap {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.svgicon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-title {
+  font-weight: bold;
+}
+
+.feature-subtitle {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+
+.feature-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.feature-text {
+  text-align: left;
+}
+
+.feature-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.feature-subtitle {
+  font-size: 12px;
+  color: #777;
+}

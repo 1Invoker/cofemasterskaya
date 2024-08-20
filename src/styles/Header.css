@@ -15,7 +15,7 @@
   .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #9a232e;
+    color: #CC2618;
     margin-right: 150px;
   }
   
@@ -39,14 +39,14 @@
   
   .phone-number {
     font-size: 16px;
-    color: #9a232e;
+    color: #CC2618;
     text-decoration: none;
     font-weight: bold;
   }
   
   .call-button {
     padding: 10px 20px;
-    background-color: #ff4d4f;
+    background-color: #CC2618;
     color: #fff;
     font-size: 14px;
     border: none;

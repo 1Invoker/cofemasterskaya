@@ -8,6 +8,7 @@ import MapSection from '../components/MapSection';
 import Footer from '../components/Footer';
 import ServiceRepair from '../components/ServiceRepair';
 import RepairCost from '../components/RepairCost';
+import ServiceAreas from '../components/Areas/ServiceAreas';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Services />
       <ServiceRepair />
       <RepairCost />
+      <ServiceAreas />
       <Process />
       <Questions />
       <MapSection />

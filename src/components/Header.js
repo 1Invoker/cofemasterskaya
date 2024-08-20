@@ -38,6 +38,9 @@ const Header = () => {
         <a className="nav-link" href="#">
           Контакты
         </a>
+        <a className="nav-link" href="#">
+          Статьи
+        </a>
       </nav>
     </header>
   );
