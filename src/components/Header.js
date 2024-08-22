@@ -17,28 +17,28 @@ const Header = () => {
       </div>
 
       <nav className="nav">
-        <a className="nav-link" href="#">
+        <a className="nav-link" href="#hero-section">
           Частые поломки
         </a>
-        <a className="nav-link" href="#">
+        <a className="nav-link" href="#repair-cost-section">
           Стоимость
         </a>
-        <a className="nav-link" href="#">
+        <a className="nav-link" href="#service-repair-section">
           Вызвать мастера
         </a>
-        <a className="nav-link" href="#">
+        <a className="nav-link" href="#service-process-section">
           Получить скидку
         </a>
-        <a className="nav-link" href="#">
+        <a className="nav-link" href="#questions-section">
           Вопрос-ответ
         </a>
-        <a className="nav-link" href="#">
+        <a className="nav-link" href="#hero-section">
           О компании
         </a>
-        <a className="nav-link" href="#">
+        <a className="nav-link" href="#map-section">
           Контакты
         </a>
-        <a className="nav-link" href="#">
+        <a className="nav-link" href="#service-areas-section">
           Статьи
         </a>
       </nav>

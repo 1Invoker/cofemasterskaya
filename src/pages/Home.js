@@ -15,15 +15,33 @@ const Home = () => {
   return (
     <>
       <Header />
-      <HeroSection />
-      <Services />
-      <ServiceProcess />
-      <ServiceRepair />
-      <RepairCost />
-      <ServiceAreas />
-      <Process />
-      <Questions />
-      <MapSection />
+      <div id="hero-section">
+        <HeroSection />
+      </div>
+      <div id="services-section">
+        <Services />
+      </div>
+      <div id="service-process-section">
+        <ServiceProcess />
+      </div>
+      <div id="service-repair-section">
+        <ServiceRepair />
+      </div>
+      <div id="repair-cost-section">
+        <RepairCost />
+      </div>
+      <div id="service-areas-section">
+        <ServiceAreas />
+      </div>
+      <div id="process-section">
+        <Process />
+      </div>
+      <div id="questions-section">
+        <Questions />
+      </div>
+      <div id="map-section">
+        <MapSection />
+      </div>
       <Footer />
     </>
   );
