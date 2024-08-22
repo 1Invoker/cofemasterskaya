@@ -38,7 +38,7 @@ const Header = () => {
         <a className="nav-link" href="#map-section">
           Контакты
         </a>
-        <a className="nav-link" href="#service-areas-section">
+        <a className="nav-link" href="/articles"> 
           Статьи
         </a>
       </nav>
