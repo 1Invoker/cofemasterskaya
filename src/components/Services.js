@@ -13,6 +13,7 @@ import noStartImage from "./assets/images/images (1).jpeg";
 import batteryIssueImage from "./assets/images/images.jpeg";
 import streaksImage from "./assets/images/full_OojnNkZ6.jpg";
 import noMovementImage from "./assets/images/obsluzhivanie-polomoechnyh-mashin.png";
+import divorces from "./assets/images/52.jpeg";
 
 const Services = () => {
   return (
@@ -189,7 +190,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src="/images/floor_machine_10.jpg"
+            src={noStartImage}
             alt="Не выключается"
           />
           <div className="service-content">
@@ -207,7 +208,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src="/images/floor_machine_11.jpg"
+            src={batteryIssueImage}
             alt="Не запускается"
           />
           <div className="service-content">
@@ -225,7 +226,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src="/images/floor_machine_12.jpg"
+            src={streaksImage}
             alt="Аккумулятор не заряжается"
           />
           <div className="service-content">
@@ -243,7 +244,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src="/images/floor_machine_13.jpg"
+            src={divorces}
             alt="Оставляет разводы"
           />
           <div className="service-content">
@@ -261,7 +262,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src="/images/floor_machine_14.jpg"
+            src={noMovementImage}
             alt="Не начинает движение"
           />
           <div className="service-content">
