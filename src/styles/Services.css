@@ -21,20 +21,20 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px; /* Увеличенное расстояние между карточками */
-  max-width: 1110px; /* Максимальная ширина для 2 карточек в строке */
-  margin: 0 auto; /* Центрирование контейнера */
+  gap: 30px;
+  max-width: 1110px;
+  margin: 0 auto;
 }
 
 .service-card {
   display: flex;
-  flex-direction: row-reverse; /* Меняем направление на row-reverse, чтобы изображение было справа */
-  justify-content: space-between; /* Разделение содержимого по сторонам */
+  flex-direction: row-reverse;
+  justify-content: space-between;
   background: #fff;
   border: 1px solid #eee;
   border-radius: 10px;
-  width: 525px; /* Фиксированная ширина карточки */
-  height: 325px; /* Фиксированная высота карточки */
+  width: 525px;
+  height: 325px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: left;
@@ -42,14 +42,14 @@
 }
 
 .service-image {
-  width: 50%; /* Ширина изображения — половина карточки */
-  height: 100%; /* Высота изображения совпадает с высотой карточки */
+  width: 50%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 10px 0 0 10px; /* Закругляем только левые углы, так как изображение справа */
+  border-radius: 10px 0 0 10px;
 }
 
 .service-content {
-  width: 45%; /* Оставляем чуть больше пространства для текста */
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

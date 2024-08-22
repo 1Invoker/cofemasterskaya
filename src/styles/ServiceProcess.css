@@ -16,7 +16,7 @@
   }
   
   .process-step:nth-child(odd) .process-image {
-    order: -1; /* Фотография слева для нечетных шагов */
+    order: -1;
   }
   
   .process-text {
@@ -55,7 +55,7 @@
   .process-image {
     flex: 1;
     display: flex;
-    flex-direction: column; /* Изменено для размещения кнопки под изображением */
+    flex-direction: column;
     align-items: center;
   }
   
@@ -67,7 +67,7 @@
   }
   
   .process-button {
-    margin-top: 20px; /* Уменьшите отступ сверху, если нужно */
+    margin-top: 20px;
     background-color: #d52e2f;
     color: white;
     padding: 15px 30px;
