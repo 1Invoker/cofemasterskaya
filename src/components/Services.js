@@ -1,14 +1,35 @@
-import React from 'react';
-import '../styles/Services.css';
+import React from "react";
+import "../styles/Services.css";
+import drainIssueImage from "./assets/images/5c6fbbbbbc063.jpg";
+import errorImage from "./assets/images/12956913654d3aae651fe0f.jpg";
+import noVacuumImage from "./assets/images/Eureka_E-51-2.200x0.jpg";
+import noWashImage from "./assets/images/images.jpeg";
+import noWaterImage from "./assets/images/polomoechnaya-mashina.jpg";
+import noPowerImage from "./assets/images/service-02.jpg";
+import brushIssueImage from "./assets/images/simple-gallery-carousel-img-1.jpg";
+import noSolutionImage from "./assets/images/simple-gallery-carousel-img-3.jpg";
+import noShutoffImage from "./assets/images/WhatsApp_Image_2022-.jpeg";
+import noStartImage from "./assets/images/images (1).jpeg";
+import batteryIssueImage from "./assets/images/images.jpeg";
+import streaksImage from "./assets/images/full_OojnNkZ6.jpg";
+import noMovementImage from "./assets/images/obsluzhivanie-polomoechnyh-mashin.png";
 
 const Services = () => {
   return (
     <section className="services-wrapper" id="services">
-      <h2 className="services-title">Что случилось с вашей поломоечной машиной?</h2>
-      <p className="services-subtitle">Выполним ремонт максимально быстро и с гарантией</p>
+      <h2 className="services-title">
+        Что случилось с вашей поломоечной машиной?
+      </h2>
+      <p className="services-subtitle">
+        Выполним ремонт максимально быстро и с гарантией
+      </p>
       <div className="services-grid">
         <div className="service-card">
-          <img className="service-image" src="/images/floor_machine_1.jpg" alt="Не сливает" />
+          <img
+            className="service-image"
+            src={drainIssueImage}
+            alt="Не сливает"
+          />
           <div className="service-content">
             <h3 className="service-title">Не сливает</h3>
             <ul className="service-description">
@@ -22,7 +43,11 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src="/images/floor_machine_2.jpg" alt="Ошибки" />
+          <img
+            className="service-image"
+            src={errorImage}
+            alt="Ошибки"
+          />
           <div className="service-content">
             <h3 className="service-title">Ошибки</h3>
             <ul className="service-description">
@@ -36,7 +61,11 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src="/images/floor_machine_3.jpg" alt="Не всасывает (не собирает) воду" />
+          <img
+            className="service-image"
+            src={noVacuumImage}
+            alt="Не всасывает (не собирает) воду"
+          />
           <div className="service-content">
             <h3 className="service-title">Не всасывает (не собирает) воду</h3>
             <ul className="service-description">
@@ -50,7 +79,11 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src="/images/floor_machine_4.jpg" alt="Не едет" />
+          <img
+            className="service-image"
+            src={noWashImage}
+            alt="Не едет"
+          />
           <div className="service-content">
             <h3 className="service-title">Не едет</h3>
             <ul className="service-description">
@@ -64,7 +97,11 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src="/images/floor_machine_5.jpg" alt="Не моет" />
+          <img
+            className="service-image"
+          src={noWaterImage}
+            alt="Не моет"
+          />
           <div className="service-content">
             <h3 className="service-title">Не моет</h3>
             <ul className="service-description">
@@ -78,7 +115,11 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src="/images/floor_machine_6.jpg" alt="не подает воду" />
+          <img
+            className="service-image"
+            src={noPowerImage}
+            alt="не подает воду"
+          />
           <div className="service-content">
             <h3 className="service-title">Не подает воду</h3>
             <ul className="service-description">
@@ -92,7 +133,11 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src="/images/floor_machine_7.jpg" alt="Не работает" />
+          <img
+            className="service-image"
+            src={brushIssueImage}
+            alt="Не работает"
+          />
           <div className="service-content">
             <h3 className="service-title">Не работает</h3>
             <ul className="service-description">
@@ -106,7 +151,11 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src="/images/floor_machine_8.jpg" alt="Не работаю щетки" />
+          <img
+            className="service-image"
+            src={noSolutionImage}
+            alt="Не работаю щетки"
+          />
           <div className="service-content">
             <h3 className="service-title">Не работают щетки</h3>
             <ul className="service-description">
@@ -120,7 +169,11 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src="/images/floor_machine_9.jpg" alt="Не подается моющий раствор" />
+          <img
+            className="service-image"
+            src={noShutoffImage}
+            alt="Не подается моющий раствор"
+          />
           <div className="service-content">
             <h3 className="service-title">Не подается моющий раствор</h3>
             <ul className="service-description">
@@ -134,7 +187,11 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src="/images/floor_machine_10.jpg" alt="Не выключается" />
+          <img
+            className="service-image"
+            src="/images/floor_machine_10.jpg"
+            alt="Не выключается"
+          />
           <div className="service-content">
             <h3 className="service-title">Не выключается</h3>
             <ul className="service-description">
@@ -148,7 +205,11 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src="/images/floor_machine_11.jpg" alt="Не запускается" />
+          <img
+            className="service-image"
+            src="/images/floor_machine_11.jpg"
+            alt="Не запускается"
+          />
           <div className="service-content">
             <h3 className="service-title">Не запускается</h3>
             <ul className="service-description">
@@ -162,7 +223,11 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src="/images/floor_machine_12.jpg" alt="Аккумулятор не заряжается" />
+          <img
+            className="service-image"
+            src="/images/floor_machine_12.jpg"
+            alt="Аккумулятор не заряжается"
+          />
           <div className="service-content">
             <h3 className="service-title">Аккумулятор не заряжается</h3>
             <ul className="service-description">
@@ -176,7 +241,11 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src="/images/floor_machine_13.jpg" alt="Оставляет разводы" />
+          <img
+            className="service-image"
+            src="/images/floor_machine_13.jpg"
+            alt="Оставляет разводы"
+          />
           <div className="service-content">
             <h3 className="service-title">Оставляет разводы</h3>
             <ul className="service-description">
@@ -190,7 +259,11 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src="/images/floor_machine_14.jpg" alt="Не начинает движение" />
+          <img
+            className="service-image"
+            src="/images/floor_machine_14.jpg"
+            alt="Не начинает движение"
+          />
           <div className="service-content">
             <h3 className="service-title">Не начинает движение</h3>
             <ul className="service-description">

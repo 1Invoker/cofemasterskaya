@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 import ServiceRepair from '../components/ServiceRepair';
 import RepairCost from '../components/RepairCost';
 import ServiceAreas from '../components/Areas/ServiceAreas';
+import ServiceProcess from '../components/ServiceProcess';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Header />
       <HeroSection />
       <Services />
+      <ServiceProcess />
       <ServiceRepair />
       <RepairCost />
       <ServiceAreas />
