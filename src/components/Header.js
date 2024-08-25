@@ -8,7 +8,6 @@ const Header = () => {
         <div className="logo">SENOR COFFEE</div>
         <div className="location">3-й Нижнелихоборский пр., 3, стр. 2, Москва</div>
         <div className="phone-number-wrapper">
-          <img className="phone-icon" src="/icons/phone.png" alt="Phone" />
           <a className="phone-number" href="tel:+74953239009">
             +7 495 323 90 09
           </a>

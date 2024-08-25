@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/ArticleList.css';
+import brushIssueImage from "./assets/images/simple-gallery-carousel-img-1.jpg";
+import noStartImage from "./assets/images/images (1).jpeg";
+import master from "./assets/images/unnamed.jpg";
 
 const articles = [
   {
@@ -21,7 +24,7 @@ const articles = [
         </p>
       </>
     ),
-    image: "/images/article1.jpg",
+    image: brushIssueImage,
   },
   {
     title: "Топ-5 причин поломок стиральных машин",
@@ -44,7 +47,7 @@ const articles = [
         </p>
       </>
     ),
-    image: "/images/article2.jpg",
+    image: noStartImage,
   },
   {
     title: "Когда стоит вызывать мастера по ремонту?",
@@ -67,7 +70,7 @@ const articles = [
         </p>
       </>
     ),
-    image: "/images/article3.jpg",
+    image: master,
   }
 ];
 
