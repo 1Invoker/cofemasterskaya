@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from "react";
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import Services from '../components/Services';
@@ -12,11 +12,26 @@ import ServiceAreas from '../components/Areas/ServiceAreas';
 import ServiceProcess from '../components/ServiceProcess';
 
 const Home = () => {
+  const [selectedLocation, setSelectedLocation] = useState('Москве');
+  const headerRef = useRef(null);
+
+  const handleLocationClick = (locationName) => {
+    setSelectedLocation(locationName);
+  };
+
+  useEffect(() => {
+    if (headerRef.current) {
+      headerRef.current.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  }, [selectedLocation]);
+
   return (
     <>
-      <Header />
+      <Header ref={headerRef} />
       <div id="hero-section">
-        <HeroSection />
+        <HeroSection location={selectedLocation} />
       </div>
       <div id="services-section">
         <Services />
@@ -31,7 +46,10 @@ const Home = () => {
         <RepairCost />
       </div>
       <div id="service-areas-section">
-        <ServiceAreas />
+        <ServiceAreas
+          onCityClick={handleLocationClick}
+          onDistrictClick={handleLocationClick}
+        />
       </div>
       <div id="process-section">
         <Process />

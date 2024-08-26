@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/HeroSection.css";
 
-const HeroSection = () => {
+const HeroSection = ({ location }) => {
   return (
     <section className="hero-wrapper">
       <div className="features-wrapper">
@@ -120,14 +120,14 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-<div className="hero">
-      <h1 className="hero-title">
-        Ремонт поломоечных машин в Москве за 2 часа
-      </h1>
-      <p className="hero-subtitle">
-        с бесплатной диагностикой и гарантией до 2-х лет
-      </p>
-</div>
+      <div className="hero">
+        <h1 className="hero-title">
+          Ремонт поломоечных машин в {location} за 2 часа
+        </h1>
+        <p className="hero-subtitle">
+          с бесплатной диагностикой и гарантией до 2-х лет
+        </p>
+      </div>
       <div className="offer-box">
         <p className="offer-text">
           Закрепите скидку 20% на обслуживание поломоечной машины
@@ -139,7 +139,7 @@ const HeroSection = () => {
             placeholder="+7 (xxx) xxx-xx-xx"
           />
           <button className="discount-button">Получить скидку</button>
-          
+
         </form><p className="footer-text">Нажимая кнопку «Получить скидку», вы соглашаетесь с Политикой конфиденциальности</p>
       </div>
     </section>
