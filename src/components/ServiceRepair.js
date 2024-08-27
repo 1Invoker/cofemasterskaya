@@ -36,8 +36,10 @@ const allServices = [
   "Замена электронного модуля"
 ];
 
-const ServiceRepair = () => {
+const ServiceRepair = ({ location }) => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const handleButtonClick = () => {
     setModalOpen(true);
@@ -46,8 +48,6 @@ const ServiceRepair = () => {
   const closeModal = () => {
     setModalOpen(false);
   };
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(null);
 
   const displayedServices = isExpanded ? allServices : allServices.slice(0, 6);
 
@@ -71,7 +71,7 @@ const ServiceRepair = () => {
               </button>
               {activeIndex === index && (
                 <button className="order-repair-button" onClick={handleButtonClick}>
-                  Заказать ремонт в Москве
+                  Заказать ремонт в {location}
                 </button>
               )}
               <Modal showModal={isModalOpen} handleClose={closeModal}/>

@@ -50,8 +50,10 @@ const allCosts = [
   }
 ];
 
-const RepairCost = () => {
+const RepairCost = ({ location }) => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const handleButtonClick = () => {
     setModalOpen(true);
@@ -60,8 +62,6 @@ const RepairCost = () => {
   const closeModal = () => {
     setModalOpen(false);
   };
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(null);
 
   const displayedCosts = isExpanded ? allCosts : allCosts.slice(0, 6);
 
@@ -88,9 +88,9 @@ const RepairCost = () => {
                 <div className="repair-cost-details">
                   <p>{cost.details}</p>
                   <button className="order-repair-button" onClick={handleButtonClick}>
-                    Заказать ремонт в Москве
+                    Заказать ремонт в {location}
                   </button>
-                  <Modal showModal={isModalOpen} handleClose={closeModal}/>
+                  <Modal showModal={isModalOpen} handleClose={closeModal} />
                 </div>
               )}
             </li>

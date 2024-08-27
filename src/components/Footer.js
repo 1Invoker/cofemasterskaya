@@ -19,13 +19,17 @@ const vtb24 =
 
 const FooterWrapper = styled.footer`
   padding: 40px 20px;
-  background: #333;
+  background: #150000;
   color: #fff;
-  text-align: center;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const FooterSection = styled.div`
-  margin-bottom: 20px;
+  flex: 1;
+  max-width: 444px;
+  margin-right: 20px;
 `;
 
 const FooterTitle = styled.h2`
@@ -41,17 +45,19 @@ const FooterText = styled.p`
 const FooterLink = styled.a`
   color: #e74c3c;
   text-decoration: none;
+  font-weight: bold;
 `;
 
 const FooterList = styled.ul`
   list-style: none;
   padding: 0;
   margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const FooterListItem = styled.li`
   font-size: 14px;
-  display: inline-block;
   margin: 10px;
 `;
 
@@ -60,29 +66,29 @@ const PaymentImage = styled.img`
   height: auto;
 `;
 
-// Новые стили для изображений банков
 const BankImage = styled.img`
-  width: 80px; /* Размер изображений банков */
+  width: 100px;
   height: auto;
-  margin: 10px; /* Отступ между изображениями */
+  margin: 10px;
 `;
 
 const Footer = () => {
   return (
     <FooterWrapper>
       <FooterSection>
-        <FooterText>&copy; 2024 Senor Coffee. Все права защищены.</FooterText>
         <FooterText>
-          Официальный сервис в Москве по ремонту поломоечных машин с опытом
-          работы более 20 лет
+          <strong>КОФЕМАСТЕРСКАЯ</strong>
+          <br />
+          сервис по ремонту кофемашин
+        </FooterText>
+        <FooterText>
+          Официальный сервис в Москве по ремонту кофемашин с опытом работы более 20 лет.
+        </FooterText>
+        <FooterText>
+          Кофемастерская. Все права защищены. Информация, размещённая на сайте, не является договором публичной оферты.
         </FooterText>
       </FooterSection>
-      <FooterSection>
-        <FooterText>
-          Все права защищены. Информация, размещённая на сайте, не является
-          договором публичной оферты.
-        </FooterText>
-      </FooterSection>
+
       <FooterSection>
         <FooterTitle>Принимаем платежные системы:</FooterTitle>
         <FooterList>
@@ -108,8 +114,6 @@ const Footer = () => {
             <PaymentImage src={yandexCass} alt="Яндекс Касса" />
           </FooterListItem>
         </FooterList>
-      </FooterSection>
-      <FooterSection>
         <FooterTitle>Банки:</FooterTitle>
         <FooterList>
           <FooterListItem>
@@ -126,17 +130,20 @@ const Footer = () => {
           </FooterListItem>
         </FooterList>
       </FooterSection>
+
       <FooterSection>
         <FooterTitle>Контакты:</FooterTitle>
         <FooterText>
-          Телефон:{" "}
           <FooterLink href="tel:+79163925911">+7 (916) 392-59-11</FooterLink>
         </FooterText>
         <FooterText>
-          Адрес: 3-й Нижнелихоборский пр., 3, стр. 2, Москва
+          3-й Нижнелихоборский пр., 3, стр. 2, Москва
         </FooterText>
         <FooterText>Пн-Пт с 07:00...23:00</FooterText>
         <FooterText>Сб-Вс с 07:00...23:00</FooterText>
+        <FooterText>
+          <FooterLink href="#">Карта сайта</FooterLink>
+        </FooterText>
       </FooterSection>
     </FooterWrapper>
   );

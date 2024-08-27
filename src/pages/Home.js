@@ -40,10 +40,10 @@ const Home = () => {
         <ServiceProcess />
       </div>
       <div id="service-repair-section">
-        <ServiceRepair />
+        <ServiceRepair location={selectedLocation} />
       </div>
       <div id="repair-cost-section">
-        <RepairCost />
+        <RepairCost location={selectedLocation} />
       </div>
       <div id="service-areas-section">
         <ServiceAreas
