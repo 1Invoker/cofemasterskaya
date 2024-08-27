@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/RepairCost.css';
+import Modal from './modal';
 
 const allCosts = [
   { 
@@ -50,6 +51,15 @@ const allCosts = [
 ];
 
 const RepairCost = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
   const [isExpanded, setIsExpanded] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -77,9 +87,10 @@ const RepairCost = () => {
               {activeIndex === index && (
                 <div className="repair-cost-details">
                   <p>{cost.details}</p>
-                  <button className="order-repair-button">
+                  <button className="order-repair-button" onClick={handleButtonClick}>
                     Заказать ремонт в Москве
                   </button>
+                  <Modal showModal={isModalOpen} handleClose={closeModal}/>
                 </div>
               )}
             </li>

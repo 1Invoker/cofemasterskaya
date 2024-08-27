@@ -33,7 +33,7 @@ const Questions = () => {
 
   return (
     <section className="questions-wrapper" id="questions">
-      <h2 className="questions-title">Часто задаваемые вопросы</h2>
+      <h2 className="questions-title">Частые вопросы</h2>
       <ul className="questions-list">
         {questionsData.map((item, index) => (
           <li key={index} className="question-item">

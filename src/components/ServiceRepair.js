@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/serviceRepair.css';
+import Modal from './modal';
 
 const allServices = [
   "Замена щеток",
@@ -36,6 +37,15 @@ const allServices = [
 ];
 
 const ServiceRepair = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
   const [isExpanded, setIsExpanded] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -60,10 +70,11 @@ const ServiceRepair = () => {
                 {service}
               </button>
               {activeIndex === index && (
-                <button className="order-repair-button">
+                <button className="order-repair-button" onClick={handleButtonClick}>
                   Заказать ремонт в Москве
                 </button>
               )}
+              <Modal showModal={isModalOpen} handleClose={closeModal}/>
             </li>
           ))}
         </ul>

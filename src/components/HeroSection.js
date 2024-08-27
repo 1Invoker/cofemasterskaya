@@ -1,7 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import "../styles/HeroSection.css";
+import Modal from "./modal";
 
 const HeroSection = ({ location }) => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
   return (
     <section className="hero-wrapper">
       <div className="features-wrapper">
@@ -138,9 +148,10 @@ const HeroSection = ({ location }) => {
             type="tel"
             placeholder="+7 (xxx) xxx-xx-xx"
           />
-          <button className="discount-button">Получить скидку</button>
+          <button className="discount-button" onClick={handleButtonClick}>Получить скидку</button>
 
         </form><p className="footer-text">Нажимая кнопку «Получить скидку», вы соглашаетесь с Политикой конфиденциальности</p>
+        <Modal showModal={isModalOpen} handleClose={closeModal}/>
       </div>
     </section>
   );

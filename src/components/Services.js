@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Services.css";
 import drainIssueImage from "./assets/images/5c6fbbbbbc063.jpg";
 import errorImage from "./assets/images/12956913654d3aae651fe0f.jpg";
@@ -14,8 +14,19 @@ import batteryIssueImage from "./assets/images/images.jpeg";
 import streaksImage from "./assets/images/full_OojnNkZ6.jpg";
 import noMovementImage from "./assets/images/obsluzhivanie-polomoechnyh-mashin.png";
 import divorces from "./assets/images/52.jpeg";
+import Modal from "./modal";
 
 const Services = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <section className="services-wrapper" id="services">
       <h2 className="services-title">
@@ -39,16 +50,15 @@ const Services = () => {
               <li className="service-item">Чистка системы слива</li>
               <li className="service-item">Диагностика электроники</li>
             </ul>
-            <button className="price-button">от 1500 руб.</button>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1500 руб.
+            </button>
+            <Modal showModal={isModalOpen} handleClose={closeModal}/>
           </div>
         </div>
 
         <div className="service-card">
-          <img
-            className="service-image"
-            src={errorImage}
-            alt="Ошибки"
-          />
+          <img className="service-image" src={errorImage} alt="Ошибки" />
           <div className="service-content">
             <h3 className="service-title">Ошибки</h3>
             <ul className="service-description">
@@ -57,7 +67,9 @@ const Services = () => {
               <li className="service-item">Замена датчиков</li>
               <li className="service-item">Чистка с разбором машины</li>
             </ul>
-            <button className="price-button">от 1000 руб.</button>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1000 руб.
+            </button>
           </div>
         </div>
 
@@ -75,16 +87,14 @@ const Services = () => {
               <li className="service-item">Чистка системы вакуума</li>
               <li className="service-item">Замена фильтра</li>
             </ul>
-            <button className="price-button">от 1200 руб.</button>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1200 руб.
+            </button>
           </div>
         </div>
 
         <div className="service-card">
-          <img
-            className="service-image"
-            src={noWashImage}
-            alt="Не едет"
-          />
+          <img className="service-image" src={noWashImage} alt="Не едет" />
           <div className="service-content">
             <h3 className="service-title">Не едет</h3>
             <ul className="service-description">
@@ -93,16 +103,14 @@ const Services = () => {
               <li className="service-item">Замена колес</li>
               <li className="service-item">Диагностика системы движения</li>
             </ul>
-            <button className="price-button">от 1300 руб.</button>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1300 руб.
+            </button>
           </div>
         </div>
 
         <div className="service-card">
-          <img
-            className="service-image"
-          src={noWaterImage}
-            alt="Не моет"
-          />
+          <img className="service-image" src={noWaterImage} alt="Не моет" />
           <div className="service-content">
             <h3 className="service-title">Не моет</h3>
             <ul className="service-description">
@@ -111,7 +119,9 @@ const Services = () => {
               <li className="service-item">Замена или ремонт ротора</li>
               <li className="service-item">Диагностика системы подачи воды</li>
             </ul>
-            <button className="price-button">от 1400 руб.</button>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1400 руб.
+            </button>
           </div>
         </div>
 
@@ -119,7 +129,7 @@ const Services = () => {
           <img
             className="service-image"
             src={noPowerImage}
-            alt="не подает воду"
+            alt="Не подает воду"
           />
           <div className="service-content">
             <h3 className="service-title">Не подает воду</h3>
@@ -129,7 +139,9 @@ const Services = () => {
               <li className="service-item">Чистка системы подачи воды</li>
               <li className="service-item">Диагностика электросистемы</li>
             </ul>
-            <button className="price-button">от 750 руб.</button>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 750 руб.
+            </button>
           </div>
         </div>
 
@@ -147,7 +159,9 @@ const Services = () => {
               <li className="service-item">Ремонт двигателя</li>
               <li className="service-item">Замена трансформатора</li>
             </ul>
-            <button className="price-button">от 1500 руб.</button>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1500 руб.
+            </button>
           </div>
         </div>
 
@@ -155,7 +169,7 @@ const Services = () => {
           <img
             className="service-image"
             src={noSolutionImage}
-            alt="Не работаю щетки"
+            alt="Не работают щетки"
           />
           <div className="service-content">
             <h3 className="service-title">Не работают щетки</h3>
@@ -165,7 +179,9 @@ const Services = () => {
               <li className="service-item">Замена редуктора</li>
               <li className="service-item">Диагностика системы щеток</li>
             </ul>
-            <button className="price-button">от 1200 руб.</button>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1200 руб.
+            </button>
           </div>
         </div>
 
@@ -183,7 +199,9 @@ const Services = () => {
               <li className="service-item">Чистка системы подачи раствора</li>
               <li className="service-item">Диагностика электросистемы</li>
             </ul>
-            <button className="price-button">от 1000 руб.</button>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1000 руб.
+            </button>
           </div>
         </div>
 
@@ -191,17 +209,19 @@ const Services = () => {
           <img
             className="service-image"
             src={noStartImage}
-            alt="Не выключается"
+            alt="Не включается"
           />
           <div className="service-content">
-            <h3 className="service-title">Не выключается</h3>
+            <h3 className="service-title">Не включается</h3>
             <ul className="service-description">
-              <li className="service-item">Диагностика электросистемы</li>
-              <li className="service-item">Замена выключателя</li>
-              <li className="service-item">Ремонт управляющей платы</li>
-              <li className="service-item">Ремонт электронного модуля</li>
+              <li className="service-item">Диагностика электропитания</li>
+              <li className="service-item">Ремонт или замена аккумулятора</li>
+              <li className="service-item">Ремонт выключателя</li>
+              <li className="service-item">Замена предохранителя</li>
             </ul>
-            <button className="price-button">от 1500 руб.</button>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 800 руб.
+            </button>
           </div>
         </div>
 
@@ -209,17 +229,19 @@ const Services = () => {
           <img
             className="service-image"
             src={batteryIssueImage}
-            alt="Не запускается"
+            alt="Не заряжается"
           />
           <div className="service-content">
-            <h3 className="service-title">Не запускается</h3>
+            <h3 className="service-title">Не заряжается</h3>
             <ul className="service-description">
-              <li className="service-item">Замена аккумулятора</li>
-              <li className="service-item">Ремонт системы запуска</li>
-              <li className="service-item">Диагностика электросистемы</li>
-              <li className="service-item">Ремонт блока управления</li>
+              <li className="service-item">Замена зарядного устройства</li>
+              <li className="service-item">Ремонт разъема зарядки</li>
+              <li className="service-item">Проверка аккумулятора</li>
+              <li className="service-item">Замена блока питания</li>
             </ul>
-            <button className="price-button">от 1600 руб.</button>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 900 руб.
+            </button>
           </div>
         </div>
 
@@ -227,35 +249,19 @@ const Services = () => {
           <img
             className="service-image"
             src={streaksImage}
-            alt="Аккумулятор не заряжается"
-          />
-          <div className="service-content">
-            <h3 className="service-title">Аккумулятор не заряжается</h3>
-            <ul className="service-description">
-              <li className="service-item">Замена аккумулятора</li>
-              <li className="service-item">Ремонт зарядного устройства</li>
-              <li className="service-item">Ремонт системы зарядки</li>
-              <li className="service-item">Диагностика системы питания</li>
-            </ul>
-            <button className="price-button">от 1400 руб.</button>
-          </div>
-        </div>
-
-        <div className="service-card">
-          <img
-            className="service-image"
-            src={divorces}
             alt="Оставляет разводы"
           />
           <div className="service-content">
             <h3 className="service-title">Оставляет разводы</h3>
             <ul className="service-description">
+              <li className="service-item">Чистка щеток</li>
               <li className="service-item">Замена щеток</li>
-              <li className="service-item">Чистка системы подачи воды</li>
-              <li className="service-item">Замена фильтра</li>
-              <li className="service-item">Регулировка давления воды</li>
+              <li className="service-item">Ремонт щеточного узла</li>
+              <li className="service-item">Диагностика системы очистки</li>
             </ul>
-            <button className="price-button">от 1200 руб.</button>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1100 руб.
+            </button>
           </div>
         </div>
 
@@ -273,10 +279,34 @@ const Services = () => {
               <li className="service-item">Ремонт или замена мотора</li>
               <li className="service-item">Замена колес</li>
             </ul>
-            <button className="price-button">от 1300 руб.</button>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1300 руб.
+            </button>
+          </div>
+        </div>
+
+        <div className="service-card">
+          <img
+            className="service-image"
+            src={divorces}
+            alt="Скрижет щетками по полу"
+          />
+          <div className="service-content">
+            <h3 className="service-title">Скрижет щетками по полу</h3>
+            <ul className="service-description">
+              <li className="service-item">Замена щеток</li>
+              <li className="service-item">Ремонт или замена мотора щеток</li>
+              <li className="service-item">Регулировка давления щеток</li>
+              <li className="service-item">Проверка крепления щеток</li>
+            </ul>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1000 руб.
+            </button>
           </div>
         </div>
       </div>
+
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </section>
   );
 };

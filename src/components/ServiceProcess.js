@@ -1,9 +1,20 @@
-import React from "react";
-import '../styles/ServiceProcess.css';
-import mobImage from './assets/images/mob.jpg';
-import repairImage from './assets/images/repair.jpg';
+import React, {useState} from "react";
+import "../styles/ServiceProcess.css";
+import mobImage from "./assets/images/mob.jpg";
+import repairImage from "./assets/images/repair.jpg";
+import call from "./assets/images/mobile-phones-telephone-call-clip-art-mobile-phone-logo-d4cdab25e60ee5af430980fff877d052.png";
+import Modal from "./modal";
 
 const ServiceProcess = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
   return (
     <div className="service-process-container">
       <div className="process-step">
@@ -29,7 +40,8 @@ const ServiceProcess = () => {
             alt="Mobile Diagnostic Screen"
             className="mobile-image"
           />
-          <button className="process-button">Записаться на диагностику</button>
+          <button className="process-button" onClick={handleButtonClick}>Записаться на диагностику</button>
+          <Modal showModal={isModalOpen} handleClose={closeModal}/>
         </div>
       </div>
 
@@ -37,12 +49,20 @@ const ServiceProcess = () => {
         <div className="process-text">
           <h2>02. Отремонтируем с гарантией</h2>
           <ul>
-            <li>Обычно мастер ремонтирует поломоечную машину на месте - у вас дома или в офисе.</li>
+            <li>
+              Обычно мастер ремонтирует поломоечную машину на месте - у вас дома
+              или в офисе.
+            </li>
             <li>Это занимает в среднем 50 минут</li>
-            <li>Если требуется сложная замена или ремонт комплектующих, профессиональная чистка, то надёжнее и безопаснее производить ремонт в мастерской.</li>
+            <li>
+              Если требуется сложная замена или ремонт комплектующих,
+              профессиональная чистка, то надёжнее и безопаснее производить
+              ремонт в мастерской.
+            </li>
           </ul>
           <div className="service-details">
-            Мастерская сервиса "SENOR COFFEE"<br />
+            Мастерская сервиса "SENOR COFFEE"
+            <br />
             Работаем на сертифицированном оригинальном оборудовании
           </div>
         </div>
@@ -56,7 +76,9 @@ const ServiceProcess = () => {
       </div>
 
       <div className="call-button">
-        <i className="phone-icon"></i>
+        <button className="call-button__in">
+          <img src={call} alt="Repair" className="button-image" onClick={handleButtonClick}/>
+        </button>
       </div>
     </div>
   );
