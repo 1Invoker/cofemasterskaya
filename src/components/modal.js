@@ -9,7 +9,7 @@ const Modal = ({ showModal, handleClose }) => {
           &times;
         </button>
         <h2>Проконсультируйтесь с мастером и оставьте заявку на бесплатную диагностику</h2>
-        <form>
+        <form className="form">
           <input type="text" placeholder="Имя *" className="input-field" />
           <input type="tel" placeholder="+7 (___) ___-__-__" className="input-field" />
           <button type="submit" className="submit-button">Отправить</button>

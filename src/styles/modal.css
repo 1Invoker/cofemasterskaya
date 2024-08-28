@@ -40,7 +40,14 @@
   
   h2 {
     margin-bottom: 20px;
-    font-size: 18px;
+    text-align: center;
+    font-family: "TTNorms Medium";
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0em;
+    color: rgb(0, 0, 0);
+    opacity: 1;
+    border-bottom: 1px solid #848b8d;
   }
   
   .input-field {
@@ -60,11 +67,16 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: -15px;
+    width: 340px;
   }
   
   .privacy-policy {
     margin-top: 10px;
     font-size: 12px;
     color: #666;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
   }
