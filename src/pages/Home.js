@@ -10,6 +10,7 @@ import ServiceRepair from '../components/ServiceRepair';
 import RepairCost from '../components/RepairCost';
 import ServiceAreas from '../components/Areas/ServiceAreas';
 import ServiceProcess from '../components/ServiceProcess';
+import Testimonials from "../components/Testimonials";
 
 const Home = () => {
   const [selectedLocation, setSelectedLocation] = useState('Москве');
@@ -53,6 +54,9 @@ const Home = () => {
       </div>
       <div id="process-section">
         <Process />
+      </div>
+      <div id="testimonials-section">
+        <Testimonials />
       </div>
       <div id="questions-section">
         <Questions />

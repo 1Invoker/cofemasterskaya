@@ -44,7 +44,7 @@
   
   .repair-cost-button:hover,
   .repair-cost-button.active {
-    background-color: #ff4d4f;
+    background-color: #CC2618;
     color: #fff;
   }
   
@@ -81,7 +81,7 @@
   
   .order-repair-button {
     display: block;
-    background-color: #ff4d4f;
+    background-color: #CC2618;
     color: #fff;
     font-size: 16px;
     border: none;
