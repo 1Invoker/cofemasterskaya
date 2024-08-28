@@ -35,6 +35,7 @@ const FooterSection = styled.div`
 const FooterTitle = styled.h2`
   font-size: 18px;
   margin-bottom: 10px;
+  color: white;
 `;
 
 const FooterText = styled.p`
