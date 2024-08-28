@@ -1,18 +1,76 @@
 .map-wrapper {
-    padding: 60px 20px;
-    background: #fff;
-  }
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.map-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  position: relative;
+  width: 1520px;
+  height: 520px;
+  margin: 0 auto;
+}
+
+.map-frame {
+  width: 100%;
+  height: 520px;
+  border: none;
+}
+
+.map-info {
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 640px;
+  height: 290px;
+  box-shadow: 0 5.333333333333333px 16px 0px rgba(0, 0, 0, 0.45);
+  background: rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(9px);
+  text-align: left;
+    font-family: "TTNorms Medium";
+    
+    line-height: 1.6;
+    letter-spacing: 0em;
+
+}
+
+.map-info h3 {
+  margin: 0;
+  font-size: 21px;
+  color: #000000;
   
-  .map-title {
-    font-size: 28px;
-    text-align: center;
-    color: #333;
-    margin-bottom: 40px;
-  }
-  
-  .map-frame {
-    width: 100%;
-    height: 450px;
-    border: none;
-  }
-  
+}
+
+.map-info p {
+  margin: 5px 0 13px;
+  font-size: 17px;
+  color: #000000;
+  padding-top:10px;
+}
+.svg-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.red-circle-svg {
+  margin-right: 10px;
+  fill: rgba(204,38,24,.8);
+}
+
+p {
+  margin: 0;
+}
+.red-separator {
+  color: red;
+  font-size: 24px;
+}
