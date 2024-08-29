@@ -14,7 +14,7 @@ const ServiceAreas = ({ onCityClick, onDistrictClick }) => {
     <div className="service-areas">
 
       <div className="service-areas__districts">
-        <h3 className="service-areas__title">Ремонт поломоечных машин в районах Москвы</h3>
+        <h3 className="service-areas__title">Ремонт кофемашин в районах Москвы</h3>
         <ul className="service-areas__list">
           {showAllDistricts
             ? districts.map((district, index) => (
@@ -44,7 +44,7 @@ const ServiceAreas = ({ onCityClick, onDistrictClick }) => {
       </div>
 
       <div className="service-areas__cities">
-        <h3 className="service-areas__title">Ремонт поломоечных машин в городах</h3>
+        <h3 className="service-areas__title">Ремонт кофемашин в городах</h3>
         <ul className="service-areas__list">
           {showAllCities
             ? cities.map((city, index) => (

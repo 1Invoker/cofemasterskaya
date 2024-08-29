@@ -37,19 +37,7 @@
     font-size: 20px;
     cursor: pointer;
   }
-  
-  h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: "TTNorms Medium";
-    font-size: 16px;
-    line-height: 1.4;
-    letter-spacing: 0em;
-    color: rgb(0, 0, 0);
-    opacity: 1;
-    border-bottom: 1px solid #848b8d;
-  }
-  
+    
   .input-field {
     width: calc(100% - 20px);
     padding: 10px;
@@ -75,8 +63,21 @@
     font-size: 12px;
     color: #666;
   }
+  h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: "TTNorms Medium";
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0em;
+    color: rgb(0, 0, 0);
+    opacity: 1;
+    border-bottom: 1px solid #848b8d;
+    padding-bottom: 10px;
+  }
+  
   .form {
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
+    margin-top: 20px;
   }

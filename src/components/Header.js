@@ -1,11 +1,14 @@
 import React, { forwardRef } from "react";
+import { Link } from "react-router-dom";
 import "../styles/Header.css";
 
 const Header = forwardRef((props, ref) => {
   return (
     <header ref={ref} className="header-wrapper">
       <div className="top-section">
-        <div className="logo">SENOR COFFEE</div>
+      <Link to="/" className="logo">
+          SENOR COFFEE
+        </Link>
         <div className="location">3-й Нижнелихоборский пр., 3, стр. 2, Москва</div>
         <div className="phone-number-wrapper">
           <a className="phone-number" href="tel:+74953239009">

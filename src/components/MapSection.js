@@ -31,7 +31,19 @@ const MapSection = () => {
                 ></path>
               </g>
             </svg>
-            <p>+7 (916) 392-59-11</p>
+            <a
+              href="tel:+79163925911"
+              style={{
+                margin: "5px 0 13px",
+                fontSize: "17px",
+                color: "#000000",
+                paddingTop: "10px",
+                textDecoration: "none",
+                backgroundColor: "transparent",
+              }}
+            >
+              +7 (916) 392-59-11
+            </a>
           </div>
           <div className="svg-text-container">
             <svg

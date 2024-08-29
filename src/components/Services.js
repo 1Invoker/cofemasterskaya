@@ -29,9 +29,7 @@ const Services = () => {
 
   return (
     <section className="services-wrapper" id="services">
-      <h2 className="services-title">
-        Что случилось с вашей поломоечной машиной?
-      </h2>
+      <h2 className="services-title">Что случилось с вашей кофемашиной?</h2>
       <p className="services-subtitle">
         Выполним ремонт максимально быстро и с гарантией
       </p>
@@ -53,22 +51,22 @@ const Services = () => {
             <button className="price-button" onClick={handleButtonClick}>
               от 1500 руб.
             </button>
-            <Modal showModal={isModalOpen} handleClose={closeModal}/>
+            <Modal showModal={isModalOpen} handleClose={closeModal} />
           </div>
         </div>
 
         <div className="service-card">
-          <img className="service-image" src={errorImage} alt="Ошибки" />
+          <img className="service-image" src={errorImage} alt="Не включается" />
           <div className="service-content">
-            <h3 className="service-title">Ошибки</h3>
+            <h3 className="service-title">Не включается</h3>
             <ul className="service-description">
-              <li className="service-item">Диагностика систем</li>
-              <li className="service-item">Ремонт электронного модуля</li>
-              <li className="service-item">Замена датчиков</li>
-              <li className="service-item">Чистка с разбором машины</li>
+              <li className="service-item">Диагностика электропитания</li>
+              <li className="service-item">Ремонт выключателя</li>
+              <li className="service-item">Замена предохранителя</li>
+              <li className="service-item">Проверка цепей</li>
             </ul>
             <button className="price-button" onClick={handleButtonClick}>
-              от 1000 руб.
+              от 800 руб.
             </button>
           </div>
         </div>
@@ -76,16 +74,16 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={noVacuumImage}
-            alt="Не всасывает (не собирает) воду"
+            src={noWashImage}
+            alt="Не варит кофе"
           />
           <div className="service-content">
-            <h3 className="service-title">Не всасывает (не собирает) воду</h3>
+            <h3 className="service-title">Не варит кофе</h3>
             <ul className="service-description">
-              <li className="service-item">Замена всасывающей балки</li>
-              <li className="service-item">Ремонт вакуумного насоса</li>
-              <li className="service-item">Чистка системы вакуума</li>
-              <li className="service-item">Замена фильтра</li>
+              <li className="service-item">Замена нагревательного элемента</li>
+              <li className="service-item">Проверка подачи воды</li>
+              <li className="service-item">Чистка кофейного тракта</li>
+              <li className="service-item">Диагностика помпы</li>
             </ul>
             <button className="price-button" onClick={handleButtonClick}>
               от 1200 руб.
@@ -94,30 +92,18 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src={noWashImage} alt="Не едет" />
+          <img
+            className="service-image"
+            src={noWaterImage}
+            alt="Не взбивает молоко"
+          />
           <div className="service-content">
-            <h3 className="service-title">Не едет</h3>
+            <h3 className="service-title">Не взбивает молоко</h3>
             <ul className="service-description">
-              <li className="service-item">Замена редуктора</li>
-              <li className="service-item">Ремонт или замена мотора</li>
-              <li className="service-item">Замена колес</li>
-              <li className="service-item">Диагностика системы движения</li>
-            </ul>
-            <button className="price-button" onClick={handleButtonClick}>
-              от 1300 руб.
-            </button>
-          </div>
-        </div>
-
-        <div className="service-card">
-          <img className="service-image" src={noWaterImage} alt="Не моет" />
-          <div className="service-content">
-            <h3 className="service-title">Не моет</h3>
-            <ul className="service-description">
-              <li className="service-item">Замена щеток</li>
-              <li className="service-item">Ремонт мотора щеток</li>
-              <li className="service-item">Замена или ремонт ротора</li>
-              <li className="service-item">Диагностика системы подачи воды</li>
+              <li className="service-item">Чистка капучинатора</li>
+              <li className="service-item">Замена трубок подачи молока</li>
+              <li className="service-item">Диагностика молочной системы</li>
+              <li className="service-item">Замена мотора капучинатора</li>
             </ul>
             <button className="price-button" onClick={handleButtonClick}>
               от 1400 руб.
@@ -129,115 +115,15 @@ const Services = () => {
           <img
             className="service-image"
             src={noPowerImage}
-            alt="Не подает воду"
+            alt="Не видит воду"
           />
           <div className="service-content">
-            <h3 className="service-title">Не подает воду</h3>
+            <h3 className="service-title">Не видит воду</h3>
             <ul className="service-description">
-              <li className="service-item">Замена насосов подачи воды</li>
-              <li className="service-item">Ремонт гидросистемы</li>
-              <li className="service-item">Чистка системы подачи воды</li>
-              <li className="service-item">Диагностика электросистемы</li>
-            </ul>
-            <button className="price-button" onClick={handleButtonClick}>
-              от 750 руб.
-            </button>
-          </div>
-        </div>
-
-        <div className="service-card">
-          <img
-            className="service-image"
-            src={brushIssueImage}
-            alt="Не работает"
-          />
-          <div className="service-content">
-            <h3 className="service-title">Не работает</h3>
-            <ul className="service-description">
+              <li className="service-item">Замена датчика воды</li>
+              <li className="service-item">Проверка системы подачи воды</li>
+              <li className="service-item">Чистка бачка для воды</li>
               <li className="service-item">Диагностика электроники</li>
-              <li className="service-item">Ремонт управляющей платы</li>
-              <li className="service-item">Ремонт двигателя</li>
-              <li className="service-item">Замена трансформатора</li>
-            </ul>
-            <button className="price-button" onClick={handleButtonClick}>
-              от 1500 руб.
-            </button>
-          </div>
-        </div>
-
-        <div className="service-card">
-          <img
-            className="service-image"
-            src={noSolutionImage}
-            alt="Не работают щетки"
-          />
-          <div className="service-content">
-            <h3 className="service-title">Не работают щетки</h3>
-            <ul className="service-description">
-              <li className="service-item">Замена щеток</li>
-              <li className="service-item">Ремонт щеточного двигателя</li>
-              <li className="service-item">Замена редуктора</li>
-              <li className="service-item">Диагностика системы щеток</li>
-            </ul>
-            <button className="price-button" onClick={handleButtonClick}>
-              от 1200 руб.
-            </button>
-          </div>
-        </div>
-
-        <div className="service-card">
-          <img
-            className="service-image"
-            src={noShutoffImage}
-            alt="Не подается моющий раствор"
-          />
-          <div className="service-content">
-            <h3 className="service-title">Не подается моющий раствор</h3>
-            <ul className="service-description">
-              <li className="service-item">Замена насосов подачи раствора</li>
-              <li className="service-item">Ремонт системы подачи раствора</li>
-              <li className="service-item">Чистка системы подачи раствора</li>
-              <li className="service-item">Диагностика электросистемы</li>
-            </ul>
-            <button className="price-button" onClick={handleButtonClick}>
-              от 1000 руб.
-            </button>
-          </div>
-        </div>
-
-        <div className="service-card">
-          <img
-            className="service-image"
-            src={noStartImage}
-            alt="Не включается"
-          />
-          <div className="service-content">
-            <h3 className="service-title">Не включается</h3>
-            <ul className="service-description">
-              <li className="service-item">Диагностика электропитания</li>
-              <li className="service-item">Ремонт или замена аккумулятора</li>
-              <li className="service-item">Ремонт выключателя</li>
-              <li className="service-item">Замена предохранителя</li>
-            </ul>
-            <button className="price-button" onClick={handleButtonClick}>
-              от 800 руб.
-            </button>
-          </div>
-        </div>
-
-        <div className="service-card">
-          <img
-            className="service-image"
-            src={batteryIssueImage}
-            alt="Не заряжается"
-          />
-          <div className="service-content">
-            <h3 className="service-title">Не заряжается</h3>
-            <ul className="service-description">
-              <li className="service-item">Замена зарядного устройства</li>
-              <li className="service-item">Ремонт разъема зарядки</li>
-              <li className="service-item">Проверка аккумулятора</li>
-              <li className="service-item">Замена блока питания</li>
             </ul>
             <button className="price-button" onClick={handleButtonClick}>
               от 900 руб.
@@ -248,19 +134,19 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={streaksImage}
-            alt="Оставляет разводы"
+            src={noSolutionImage}
+            alt="Не нагревает воду"
           />
           <div className="service-content">
-            <h3 className="service-title">Оставляет разводы</h3>
+            <h3 className="service-title">Не нагревает воду</h3>
             <ul className="service-description">
-              <li className="service-item">Чистка щеток</li>
-              <li className="service-item">Замена щеток</li>
-              <li className="service-item">Ремонт щеточного узла</li>
-              <li className="service-item">Диагностика системы очистки</li>
+              <li className="service-item">Замена нагревательного элемента</li>
+              <li className="service-item">Диагностика термостата</li>
+              <li className="service-item">Ремонт электроники</li>
+              <li className="service-item">Проверка термоблока</li>
             </ul>
             <button className="price-button" onClick={handleButtonClick}>
-              от 1100 руб.
+              от 1000 руб.
             </button>
           </div>
         </div>
@@ -268,16 +154,35 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={noMovementImage}
-            alt="Не начинает движение"
+            src={noShutoffImage}
+            alt="Не формирует таблетку"
           />
           <div className="service-content">
-            <h3 className="service-title">Не начинает движение</h3>
+            <h3 className="service-title">Не формирует таблетку</h3>
             <ul className="service-description">
-              <li className="service-item">Диагностика системы движения</li>
-              <li className="service-item">Замена редуктора</li>
-              <li className="service-item">Ремонт или замена мотора</li>
-              <li className="service-item">Замена колес</li>
+              <li className="service-item">Чистка кофейного тракта</li>
+              <li className="service-item">Замена группы заваривания</li>
+              <li className="service-item">Диагностика дозатора</li>
+              <li className="service-item">Замена фильтра воды</li>
+            </ul>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1100 руб.
+            </button>
+          </div>
+        </div>
+        <div className="service-card">
+          <img
+            className="service-image"
+            src={noVacuumImage}
+            alt="Не работает капучинатор"
+          />
+          <div className="service-content">
+            <h3 className="service-title">Не работает капучинатор</h3>
+            <ul className="service-description">
+              <li className="service-item">Замена капучинатора</li>
+              <li className="service-item">Чистка системы капучинатора</li>
+              <li className="service-item">Диагностика помпы капучинатора</li>
+              <li className="service-item">Ремонт электроники капучинатора</li>
             </ul>
             <button className="price-button" onClick={handleButtonClick}>
               от 1300 руб.
@@ -288,19 +193,243 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={divorces}
-            alt="Скрижет щетками по полу"
+            src={brushIssueImage}
+            alt="Не работает помпа"
           />
           <div className="service-content">
-            <h3 className="service-title">Скрижет щетками по полу</h3>
+            <h3 className="service-title">Не работает помпа</h3>
             <ul className="service-description">
-              <li className="service-item">Замена щеток</li>
-              <li className="service-item">Ремонт или замена мотора щеток</li>
-              <li className="service-item">Регулировка давления щеток</li>
-              <li className="service-item">Проверка крепления щеток</li>
+              <li className="service-item">Замена помпы</li>
+              <li className="service-item">Диагностика системы подачи воды</li>
+              <li className="service-item">Чистка помпы</li>
+              <li className="service-item">Проверка электроники</li>
+            </ul>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 2000 руб.
+            </button>
+          </div>
+        </div>
+
+        <div className="service-card">
+          <img
+            className="service-image"
+            src={batteryIssueImage}
+            alt="Не взбивает пену"
+          />
+          <div className="service-content">
+            <h3 className="service-title">Не взбивает пену</h3>
+            <ul className="service-description">
+              <li className="service-item">Диагностика капучинатора</li>
+              <li className="service-item">Замена трубок подачи молока</li>
+              <li className="service-item">Чистка системы вспенивания</li>
+              <li className="service-item">Ремонт мотора капучинатора</li>
+            </ul>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1400 руб.
+            </button>
+          </div>
+        </div>
+
+        <div className="service-card">
+          <img
+            className="service-image"
+            src={streaksImage}
+            alt="Не видит кофе"
+          />
+          <div className="service-content">
+            <h3 className="service-title">Не видит кофе</h3>
+            <ul className="service-description">
+              <li className="service-item">Замена датчика кофе</li>
+              <li className="service-item">Проверка кофемолки</li>
+              <li className="service-item">Чистка кофейного тракта</li>
+              <li className="service-item">Диагностика электроники</li>
             </ul>
             <button className="price-button" onClick={handleButtonClick}>
               от 1000 руб.
+            </button>
+          </div>
+        </div>
+
+        <div className="service-card">
+          <img
+            className="service-image"
+            src={noMovementImage}
+            alt="Не горячий кофе"
+          />
+          <div className="service-content">
+            <h3 className="service-title">Не горячий кофе</h3>
+            <ul className="service-description">
+              <li className="service-item">Проверка термостата</li>
+              <li className="service-item">Замена нагревательного элемента</li>
+              <li className="service-item">Чистка нагревательного блока</li>
+              <li className="service-item">Диагностика электроники</li>
+            </ul>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1100 руб.
+            </button>
+          </div>
+        </div>
+
+        <div className="service-card">
+          <img className="service-image" src={divorces} alt="Не мелет кофе" />
+          <div className="service-content">
+            <h3 className="service-title">Не мелет кофе</h3>
+            <ul className="service-description">
+              <li className="service-item">Замена кофемолки</li>
+              <li className="service-item">Диагностика двигателя кофемолки</li>
+              <li className="service-item">Чистка кофейного тракта</li>
+              <li className="service-item">Проверка электропроводки</li>
+            </ul>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1500 руб.
+            </button>
+          </div>
+        </div>
+
+        <div className="service-card">
+          <img
+            className="service-image"
+            src={noStartImage}
+            alt="Не набирает давление"
+          />
+          <div className="service-content">
+            <h3 className="service-title">Не набирает давление</h3>
+            <ul className="service-description">
+              <li className="service-item">Диагностика помпы</li>
+              <li className="service-item">Проверка клапанов</li>
+              <li className="service-item">Чистка системы давления</li>
+              <li className="service-item">Замена манометра</li>
+            </ul>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1700 руб.
+            </button>
+          </div>
+        </div>
+
+        <div className="service-card">
+          <img className="service-image" src={drainIssueImage} alt="Течет" />
+          <div className="service-content">
+            <h3 className="service-title">Течет</h3>
+            <ul className="service-description">
+              <li className="service-item">Замена уплотнительных колец</li>
+              <li className="service-item">Проверка шлангов</li>
+              <li className="service-item">Диагностика клапанов</li>
+              <li className="service-item">Ремонт гидравлической системы</li>
+            </ul>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1300 руб.
+            </button>
+          </div>
+        </div>
+
+        <div className="service-card">
+          <img
+            className="service-image"
+            src={noSolutionImage}
+            alt="Не выключается"
+          />
+          <div className="service-content">
+            <h3 className="service-title">Не выключается</h3>
+            <ul className="service-description">
+              <li className="service-item">Диагностика системы управления</li>
+              <li className="service-item">Замена кнопки выключения</li>
+              <li className="service-item">Проверка электроники</li>
+              <li className="service-item">Ремонт блока питания</li>
+            </ul>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1200 руб.
+            </button>
+          </div>
+        </div>
+
+        <div className="service-card">
+          <img className="service-image" src={noShutoffImage} alt="Мигает" />
+          <div className="service-content">
+            <h3 className="service-title">Мигает</h3>
+            <ul className="service-description">
+              <li className="service-item">Проверка блока управления</li>
+              <li className="service-item">Замена индикаторов</li>
+              <li className="service-item">Диагностика электроники</li>
+              <li className="service-item">Проверка датчиков</li>
+            </ul>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1100 руб.
+            </button>
+          </div>
+        </div>
+
+        <div className="service-card">
+          <img className="service-image" src={errorImage} alt="Горит красным" />
+          <div className="service-content">
+            <h3 className="service-title">Горит красным</h3>
+            <ul className="service-description">
+              <li className="service-item">Проверка датчиков</li>
+              <li className="service-item">Замена индикатора</li>
+              <li className="service-item">Диагностика блока управления</li>
+              <li className="service-item">Ремонт электроники</li>
+            </ul>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 900 руб.
+            </button>
+          </div>
+        </div>
+
+        <div className="service-card">
+          <img
+            className="service-image"
+            src={noPowerImage}
+            alt="Не работает кнопка"
+          />
+          <div className="service-content">
+            <h3 className="service-title">Не работает кнопка</h3>
+            <ul className="service-description">
+              <li className="service-item">Замена кнопки</li>
+              <li className="service-item">Диагностика кнопки</li>
+              <li className="service-item">Проверка подключения кнопки</li>
+              <li className="service-item">Ремонт блока управления</li>
+            </ul>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1000 руб.
+            </button>
+          </div>
+        </div>
+
+        <div className="service-card">
+          <img
+            className="service-image"
+            src={noWashImage}
+            alt="Кофемашина не формирует таблетку"
+          />
+          <div className="service-content">
+            <h3 className="service-title">Кофемашина не формирует таблетку</h3>
+            <ul className="service-description">
+              <li className="service-item">Замена фильтра</li>
+              <li className="service-item">Чистка системы</li>
+              <li className="service-item">Диагностика кофейной группы</li>
+              <li className="service-item">Ремонт дозатора</li>
+            </ul>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1500 руб.
+            </button>
+          </div>
+        </div>
+
+        <div className="service-card">
+          <img
+            className="service-image"
+            src={batteryIssueImage}
+            alt="Заклинило"
+          />
+          <div className="service-content">
+            <h3 className="service-title">Заклинило</h3>
+            <ul className="service-description">
+              <li className="service-item">Диагностика механики</li>
+              <li className="service-item">Замена двигателей</li>
+              <li className="service-item">Чистка движущихся частей</li>
+              <li className="service-item">Проверка электроники</li>
+            </ul>
+            <button className="price-button" onClick={handleButtonClick}>
+              от 1300 руб.
             </button>
           </div>
         </div>

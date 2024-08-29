@@ -132,7 +132,7 @@ const HeroSection = ({ location }) => {
       </div>
       <div className="hero">
         <h1 className="hero-title">
-          Ремонт поломоечных машин в {location} за 2 часа
+          Ремонт кофемашин в {location} за 2 часа
         </h1>
         <p className="hero-subtitle">
           с бесплатной диагностикой и гарантией до 2-х лет
@@ -140,7 +140,7 @@ const HeroSection = ({ location }) => {
       </div>
       <div className="offer-box">
         <p className="offer-text">
-          Закрепите скидку 20% на обслуживание поломоечной машины
+          Закрепите скидку 20% на обслуживание кофемашины
         </p>
         <form>
           <input

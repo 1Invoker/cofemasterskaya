@@ -24,7 +24,7 @@
   padding: 25px;
   width: 560px;
   height: 228;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 30px auto;
   border: 1px solid #e1e1e1;
 }
 
@@ -94,6 +94,7 @@ form {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 .feature-item {
