@@ -11,15 +11,13 @@
   text-align: center;
   color: #333;
   margin-bottom: 20px;
-  margin-right: 280px;
 }
 
 .questions-list {
   list-style: none;
   padding: 0;
-  width: 100%;
+  margin-left: 250px;
   max-width: 600px;
-  margin: 0 auto;
 }
 
 .question-item {

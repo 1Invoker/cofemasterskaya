@@ -71,4 +71,13 @@
   .nav-link:hover {
     border-bottom: 1px dashed #d41919;
   }
-  
+  .logo-tagline {
+    text-align: left;
+    font-family: "TTNorms Medium";
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0em;
+    opacity: 0.71;
+    margin-left: 570px;
+    margin-top: -10px;
+  }

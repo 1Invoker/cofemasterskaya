@@ -9,15 +9,19 @@ const Header = forwardRef((props, ref) => {
       <Link to="/" className="logo">
           SENOR COFFEE
         </Link>
+        
         <div className="location">3-й Нижнелихоборский пр., 3, стр. 2, Москва</div>
         <div className="phone-number-wrapper">
           <a className="phone-number" href="tel:+74953239009">
             +7 495 323 90 09
           </a>
         </div>
+        
         <button className="call-button">Заказать звонок</button>
       </div>
-
+      <div className="logo-tagline">
+            Ремонт кофемашин
+          </div>
       <nav className="nav">
         <a className="nav-link" href="#hero-section">
           Частые поломки
