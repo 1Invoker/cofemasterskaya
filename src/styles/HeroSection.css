@@ -97,6 +97,15 @@ form {
   margin-top: 20px;
 }
 
+.hero-background {
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
 .feature-item {
   background: #ffffff;
   border-radius: 30px;

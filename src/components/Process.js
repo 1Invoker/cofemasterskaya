@@ -4,7 +4,7 @@ import '../styles/Process.css';
 const Process = () => {
   return (
     <section className="process-wrapper" id="process">
-      <h2 className="process-title">КАК МЫ РАБОТАЕМ</h2>
+      <h2 className="process-title">Как мы работаем</h2>
       <div className="steps">
         <div className="step">
           <div className="step-number">01</div>

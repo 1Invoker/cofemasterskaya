@@ -1,19 +1,5 @@
 import React, { useState } from "react";
 import "../styles/Services.css";
-import drainIssueImage from "./assets/images/5c6fbbbbbc063.jpg";
-import errorImage from "./assets/images/12956913654d3aae651fe0f.jpg";
-import noVacuumImage from "./assets/images/Eureka_E-51-2.200x0.jpg";
-import noWashImage from "./assets/images/images.jpeg";
-import noWaterImage from "./assets/images/polomoechnaya-mashina.jpg";
-import noPowerImage from "./assets/images/service-02.jpg";
-import brushIssueImage from "./assets/images/simple-gallery-carousel-img-1.jpg";
-import noSolutionImage from "./assets/images/simple-gallery-carousel-img-3.jpg";
-import noShutoffImage from "./assets/images/WhatsApp_Image_2022-.jpeg";
-import noStartImage from "./assets/images/images (1).jpeg";
-import batteryIssueImage from "./assets/images/images.jpeg";
-import streaksImage from "./assets/images/full_OojnNkZ6.jpg";
-import noMovementImage from "./assets/images/obsluzhivanie-polomoechnyh-mashin.png";
-import divorces from "./assets/images/52.jpeg";
 import Modal from "./modal";
 
 const Services = () => {
@@ -37,7 +23,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={drainIssueImage}
+            src='https://art-vending.ru/upload/iblock/c0e/FRANKE%20A400.jpg'
             alt="Не сливает"
           />
           <div className="service-content">
@@ -56,7 +42,7 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src={errorImage} alt="Не включается" />
+          <img className="service-image" src='https://static.insales-cdn.com/images/products/1/4693/562762325/1.jpg' alt="Не включается" />
           <div className="service-content">
             <h3 className="service-title">Не включается</h3>
             <ul className="service-description">
@@ -74,7 +60,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={noWashImage}
+            src='https://kitfort.ru/upload/resize_cache/webp/upload/iblock/bc1/9l02d1t2bgnmuykmwvtw10p77sacd4tv.webp'
             alt="Не варит кофе"
           />
           <div className="service-content">
@@ -94,7 +80,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={noWaterImage}
+            src='https://coffe-mashina.ru/image/cache/catalog/products/Saeco/kofemashina_saeco_granaroma_sm6582-767x767.jpg'
             alt="Не взбивает молоко"
           />
           <div className="service-content">
@@ -114,7 +100,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={noPowerImage}
+            src='https://smgshop.ru/uploads/shop/products/large/49d67e63696650ce354fe78ed1d3bf4e.jpg'
             alt="Не видит воду"
           />
           <div className="service-content">
@@ -134,7 +120,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={noSolutionImage}
+            src='https://remontano.ru/assets/images/articles/coffe-machines/Kakie-faktory-vyzyvayut-polomki-kofemashiny.jpg'
             alt="Не нагревает воду"
           />
           <div className="service-content">
@@ -154,7 +140,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={noShutoffImage}
+            src='https://remontano.ru/assets/images/articles/coffe-machines/ne-varit-kofe.jpg'
             alt="Не формирует таблетку"
           />
           <div className="service-content">
@@ -173,7 +159,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={noVacuumImage}
+            src='https://masterkoffee.com/assets/img/kofe-slishkom-kholodnyy-goryachiy/1.jpg'
             alt="Не работает капучинатор"
           />
           <div className="service-content">
@@ -193,7 +179,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={brushIssueImage}
+            src='https://c3.cofe-pro.ru/html/termosolar/images/slider-3.jpg'
             alt="Не работает помпа"
           />
           <div className="service-content">
@@ -213,7 +199,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={batteryIssueImage}
+            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReGOSJZmG6ZvBxiXNxfqUeBKmV0s0W_NRTmA&s'
             alt="Не взбивает пену"
           />
           <div className="service-content">
@@ -233,7 +219,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={streaksImage}
+            src='https://www.philips.ru/c-dam/b2c/category-pages/Household/coffee/ru/cappuccino-machine.jpg'
             alt="Не видит кофе"
           />
           <div className="service-content">
@@ -253,7 +239,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={noMovementImage}
+            src='https://a.d-cd.net/qO2wyDb_PGWZ9_GLFm6fqGMjr3k-960.jpg'
             alt="Не горячий кофе"
           />
           <div className="service-content">
@@ -271,7 +257,7 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src={divorces} alt="Не мелет кофе" />
+          <img className="service-image" src='https://life-kofe.ru/image/catalog/articles-old/35/160.jpg' alt="Не мелет кофе" />
           <div className="service-content">
             <h3 className="service-title">Не мелет кофе</h3>
             <ul className="service-description">
@@ -289,7 +275,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={noStartImage}
+            src='https://lh5.googleusercontent.com/2OKYoJaLh1UywvJ5X8Pbw7ZWm0MT3kemh4Y0TNVsWJlHcsTKAz_zye2XJEbijV9_gr4fMxpLWqdb64pMrQBGuPRFy9sNEvkayI8WCqXKJZEj4-iAub5vAgk_aDc3GtgdVKu50ozo'
             alt="Не набирает давление"
           />
           <div className="service-content">
@@ -307,7 +293,7 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src={drainIssueImage} alt="Течет" />
+          <img className="service-image" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDeqaN_TIECmd_v4MGeC7-h92x0DbnBw18VtLU4by9CMxPCCqIaU6_DT0OLValQo95h2g&usqp=CAU' alt="Течет" />
           <div className="service-content">
             <h3 className="service-title">Течет</h3>
             <ul className="service-description">
@@ -325,7 +311,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={noSolutionImage}
+            src='https://ruscoffee.ru/upload/resize_cache/iblock/06b/300_233_2/06b1bf7670c060c4cbefa267e9657027.jpg'
             alt="Не выключается"
           />
           <div className="service-content">
@@ -343,7 +329,7 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src={noShutoffImage} alt="Мигает" />
+          <img className="service-image" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoRKyK-6Ckso72y0xcmgOG9wdd8FSerfHcIQ&s' alt="Мигает" />
           <div className="service-content">
             <h3 className="service-title">Мигает</h3>
             <ul className="service-description">
@@ -359,7 +345,7 @@ const Services = () => {
         </div>
 
         <div className="service-card">
-          <img className="service-image" src={errorImage} alt="Горит красным" />
+          <img className="service-image" src='https://vashmaster27.ru/images/blog/106-2.jpg' alt="Горит красным" />
           <div className="service-content">
             <h3 className="service-title">Горит красным</h3>
             <ul className="service-description">
@@ -377,7 +363,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={noPowerImage}
+            src='https://onkofe.com/assets/images/steps.jpg'
             alt="Не работает кнопка"
           />
           <div className="service-content">
@@ -397,7 +383,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={noWashImage}
+            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoXBQy87EYJZE9rp11gVMLYEclUPuwJE9kKg&s'
             alt="Кофемашина не формирует таблетку"
           />
           <div className="service-content">
@@ -417,7 +403,7 @@ const Services = () => {
         <div className="service-card">
           <img
             className="service-image"
-            src={batteryIssueImage}
+            src='https://siemens-remont.ru/img/icons/ne-vzbivaet-moloko.jpg'
             alt="Заклинило"
           />
           <div className="service-content">

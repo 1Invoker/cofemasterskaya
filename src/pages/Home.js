@@ -15,6 +15,7 @@ import Testimonials from "../components/Testimonials";
 const Home = () => {
   const [selectedLocation, setSelectedLocation] = useState('Москве');
   const headerRef = useRef(null);
+  const footerRef = useRef(null);
 
   const handleLocationClick = (locationName) => {
     setSelectedLocation(locationName);
@@ -64,7 +65,7 @@ const Home = () => {
       <div id="map-section">
         <MapSection />
       </div>
-      <Footer />
+      <Footer ref={footerRef} />
     </>
   );
 };

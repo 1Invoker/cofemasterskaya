@@ -13,7 +13,7 @@ const HeroSection = ({ location }) => {
     setModalOpen(false);
   };
   return (
-    <section className="hero-wrapper">
+    <section className="hero-wrapper hero-background">
       <div className="features-wrapper">
         <div className="feature-item">
           <div className="svgwrap">
