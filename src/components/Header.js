@@ -1,6 +1,7 @@
 import React, { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
+import CoffeeTypesDropdown from "./CoffeeTypesDropdown";
 
 const Header = forwardRef((props, ref) => {
   return (
@@ -13,7 +14,7 @@ const Header = forwardRef((props, ref) => {
         <div className="location">3-й Нижнелихоборский пр., 3, стр. 2, Москва</div>
         <div className="phone-number-wrapper">
           <a className="phone-number" href="tel:+74953239009">
-            +7 495 323 90 09
+          +7 (916) 392-59-11
           </a>
         </div>
         
@@ -44,6 +45,7 @@ const Header = forwardRef((props, ref) => {
         <a className="nav-link" href="#map-section">
           Контакты
         </a>
+        <CoffeeTypesDropdown />
         <a className="nav-link" href="/articles"> 
           Статьи
         </a>

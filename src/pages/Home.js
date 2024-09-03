@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import Services from '../components/Services';
@@ -11,23 +12,30 @@ import RepairCost from '../components/RepairCost';
 import ServiceAreas from '../components/Areas/ServiceAreas';
 import ServiceProcess from '../components/ServiceProcess';
 import Testimonials from "../components/Testimonials";
+import CoffeeMachineIssues from "../components/coffeeMachineIssues";
+import CoffeeMachineBrands from "../components/CoffeeMachineBrands";
 
 const Home = () => {
+  const { cityName, districtName } = useParams();
   const [selectedLocation, setSelectedLocation] = useState('Москве');
   const headerRef = useRef(null);
   const footerRef = useRef(null);
 
-  const handleLocationClick = (locationName) => {
-    setSelectedLocation(locationName);
-  };
-
   useEffect(() => {
-    if (headerRef.current) {
-      headerRef.current.scrollIntoView({
-        behavior: 'smooth'
-      });
+    if (cityName) {
+      setSelectedLocation(cityName.charAt(0).toUpperCase() + cityName.slice(1));
+    } else if (districtName) {
+      setSelectedLocation(districtName.charAt(0).toUpperCase() + districtName.slice(1));
     }
-  }, [selectedLocation]);
+  }, [cityName, districtName]);
+
+  // Функция для обработки клика на локацию
+  const handleLocationClick = (locationName, locationType) => {
+    const url = locationType === 'city'
+      ? `/city/${locationName.toLowerCase().replace(/\s+/g, '-')}`
+      : `/district/${locationName.toLowerCase().replace(/\s+/g, '-')}`;
+    window.location.href = url; // Обновляем URL
+  };
 
   return (
     <>
@@ -37,6 +45,12 @@ const Home = () => {
       </div>
       <div id="services-section">
         <Services />
+      </div>
+      <div>
+        <CoffeeMachineIssues location={selectedLocation} />
+      </div>
+      <div>
+        <CoffeeMachineBrands location={selectedLocation} />
       </div>
       <div id="service-process-section">
         <ServiceProcess />
@@ -49,8 +63,8 @@ const Home = () => {
       </div>
       <div id="service-areas-section">
         <ServiceAreas
-          onCityClick={handleLocationClick}
-          onDistrictClick={handleLocationClick}
+          onCityClick={(cityName) => handleLocationClick(cityName, 'city')}
+          onDistrictClick={(districtName) => handleLocationClick(districtName, 'district')}
         />
       </div>
       <div id="process-section">

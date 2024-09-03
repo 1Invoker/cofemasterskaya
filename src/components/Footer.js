@@ -127,15 +127,14 @@ const Footer = forwardRef((props, ref) => {
       <FooterContentWrapper>
         <FooterSection>
           <FooterText>
-            <strong>КОФЕМАСТЕРСКАЯ</strong>
+            <strong>SENOR COFFEE</strong>
             <br />
             сервис по ремонту кофемашин
           </FooterText>
           <FooterText>
             Официальный сервис в Москве по ремонту кофемашин с опытом работы более 20 лет.
           </FooterText>
-          <FooterText>
-            Кофемастерская. Все права защищены. Информация, размещённая на сайте, не является договором публичной оферты.
+          <FooterText>Все права защищены. Информация, размещённая на сайте, не является договором публичной оферты.
           </FooterText>
         </FooterSection>
 
