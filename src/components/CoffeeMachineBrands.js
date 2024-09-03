@@ -178,20 +178,20 @@ const coffeeMachineBrands = [
     { name: "V-ZUG", imageUrl: "https://kofemasterskaya.ru/bitrix/templates/books/img/content/kofemashin/logo/v-zug.png" }
   ];
 
-const CoffeeMachineBrands = () => {
-  const [показатьВсе, установитьПоказатьВсе] = useState(false);
+const CoffeeMachineBrands = ({selectedBrand, onBrandClick}) => {
+  const [showAll, setShowAll] = useState(false);
 
-  const отображаемыеБренды = показатьВсе ? coffeeMachineBrands : coffeeMachineBrands.slice(0, 16);
+  const showBrands = showAll ? coffeeMachineBrands : coffeeMachineBrands.slice(0, 16);
 
   return (
     <section className="coffee-machine-brands-wrapper">
       <h2 className="coffee-machine-brands-title">Ремонтируем все бренды кофемашин</h2>
       <div className="coffee-machine-brands-grid">
-        {отображаемыеБренды.map((brand) => (
+        {showBrands.map((brand) => (
           <a
             key={brand.name}
-            href={`/${brand.name.toLowerCase().replace(/ /g, '-')}`}
             className="coffee-machine-brand-card"
+            onClick={() => onBrandClick(brand.name)}
           >
             <img
               src={brand.imageUrl}
@@ -202,17 +202,17 @@ const CoffeeMachineBrands = () => {
         ))}
       </div>
       <div className="show-more-container">
-        {показатьВсе ? (
+        {showAll ? (
           <button 
             className="show-more-button" 
-            onClick={() => установитьПоказатьВсе(false)}
+            onClick={() => setShowAll(false)}
           >
             Свернуть
           </button>
         ) : (
           <button 
             className="show-more-button" 
-            onClick={() => установитьПоказатьВсе(true)}
+            onClick={() => setShowAll(true)}
           >
             Показать еще
           </button>

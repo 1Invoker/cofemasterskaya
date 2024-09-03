@@ -7,22 +7,22 @@ const Header = forwardRef((props, ref) => {
   return (
     <header ref={ref} className="header-wrapper">
       <div className="top-section">
-      <Link to="/" className="logo">
+        <a href="/" className="logo">
           SENOR COFFEE
-        </Link>
-        
-        <div className="location">3-й Нижнелихоборский пр., 3, стр. 2, Москва</div>
+        </a>
+
+        <div className="location">
+          3-й Нижнелихоборский пр., 3, стр. 2, Москва
+        </div>
         <div className="phone-number-wrapper">
           <a className="phone-number" href="tel:+74953239009">
-          +7 (916) 392-59-11
+            +7 (916) 392-59-11
           </a>
         </div>
-        
+
         <button className="call-button">Заказать звонок</button>
       </div>
-      <div className="logo-tagline">
-            Ремонт кофемашин
-          </div>
+      <div className="logo-tagline">Ремонт кофемашин</div>
       <nav className="nav">
         <a className="nav-link" href="#hero-section">
           Частые поломки
@@ -46,7 +46,7 @@ const Header = forwardRef((props, ref) => {
           Контакты
         </a>
         <CoffeeTypesDropdown />
-        <a className="nav-link" href="/articles"> 
+        <a className="nav-link" href="/articles">
           Статьи
         </a>
       </nav>

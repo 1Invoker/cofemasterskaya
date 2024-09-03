@@ -16,8 +16,9 @@ import CoffeeMachineIssues from "../components/coffeeMachineIssues";
 import CoffeeMachineBrands from "../components/CoffeeMachineBrands";
 
 const Home = () => {
-  const { cityName, districtName } = useParams();
+  const { cityName, districtName, brandName } = useParams();
   const [selectedLocation, setSelectedLocation] = useState('Москве');
+  const [selectedBrand, setSelectedBrand] = useState(''); 
   const headerRef = useRef(null);
   const footerRef = useRef(null);
 
@@ -26,22 +27,32 @@ const Home = () => {
       setSelectedLocation(cityName.charAt(0).toUpperCase() + cityName.slice(1));
     } else if (districtName) {
       setSelectedLocation(districtName.charAt(0).toUpperCase() + districtName.slice(1));
+    } else {
+      setSelectedLocation('Москве');
     }
-  }, [cityName, districtName]);
 
-  // Функция для обработки клика на локацию
+    if (brandName) {
+      setSelectedBrand(brandName.charAt(0).toUpperCase() + brandName.slice(1));
+    }
+  }, [cityName, districtName, brandName]);
+
   const handleLocationClick = (locationName, locationType) => {
     const url = locationType === 'city'
       ? `/city/${locationName.toLowerCase().replace(/\s+/g, '-')}`
       : `/district/${locationName.toLowerCase().replace(/\s+/g, '-')}`;
-    window.location.href = url; // Обновляем URL
+    window.location.href = url;
+  };
+
+  const handleBrandClick = (brandName) => {
+    const url = `/brand/${brandName.toLowerCase().replace(/\s+/g, '-')}`;
+    window.location.href = url;
   };
 
   return (
     <>
       <Header ref={headerRef} />
       <div id="hero-section">
-        <HeroSection location={selectedLocation} />
+        <HeroSection location={selectedLocation} selectedBrand={selectedBrand} />
       </div>
       <div id="services-section">
         <Services />
@@ -50,7 +61,7 @@ const Home = () => {
         <CoffeeMachineIssues location={selectedLocation} />
       </div>
       <div>
-        <CoffeeMachineBrands location={selectedLocation} />
+        <CoffeeMachineBrands location={selectedLocation} selectedBrand={selectedBrand} onBrandClick={handleBrandClick} />
       </div>
       <div id="service-process-section">
         <ServiceProcess />

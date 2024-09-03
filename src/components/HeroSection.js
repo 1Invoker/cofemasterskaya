@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "../styles/HeroSection.css";
 import Modal from "./modal";
 
-const HeroSection = ({ location }) => {
+const HeroSection = ({ location, selectedBrand }) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
   const handleButtonClick = () => {
@@ -132,12 +132,16 @@ const HeroSection = ({ location }) => {
       </div>
       <div className="hero">
         <h1 className="hero-title">
-          Ремонт кофемашин в {location} за 2 часа
+          Ремонт кофемашин {selectedBrand ? `бренда ${selectedBrand}` : ""} в{" "}
+          {location} за 2 часа
         </h1>
         <p className="hero-subtitle">
-          с бесплатной диагностикой и гарантией до 2-х лет
+          {selectedBrand
+            ? `Предоставляем срочные ремонтные услуги для кофемашин ${selectedBrand} - ремонт строго на дому в день обращения. Гарантия по договору.`
+            : "С бесплатной диагностикой и гарантией до 2-х лет"}
         </p>
       </div>
+
       <div className="offer-box">
         <p className="offer-text">
           Закрепите скидку 20% на обслуживание кофемашины
@@ -148,10 +152,15 @@ const HeroSection = ({ location }) => {
             type="tel"
             placeholder="+7 (xxx) xxx-xx-xx"
           />
-          <button className="discount-button" onClick={handleButtonClick}>Получить скидку</button>
-
-        </form><p className="footer-text">Нажимая кнопку «Получить скидку», вы соглашаетесь с Политикой конфиденциальности</p>
-        <Modal showModal={isModalOpen} handleClose={closeModal}/>
+          <button className="discount-button" onClick={handleButtonClick}>
+            Получить скидку
+          </button>
+        </form>
+        <p className="footer-text">
+          Нажимая кнопку «Получить скидку», вы соглашаетесь с Политикой
+          конфиденциальности
+        </p>
+        <Modal showModal={isModalOpen} handleClose={closeModal} />
       </div>
     </section>
   );
