@@ -8,6 +8,11 @@ const CoffeeTypesDropdown = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleTypeClick = (type) => {
+    const url = `/type/${type.toLowerCase().replace(/\s+/g, '-')}`;
+    window.location.href = url;
+  };
+
   return (
     <div className="coffee-types-dropdown" onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
       <div className="dropdown-button">
@@ -17,16 +22,16 @@ const CoffeeTypesDropdown = () => {
         <div className="dropdown-content">
           <div className="dropdown-column">
             <ul>
-              <li>Автоматические</li>
-              <li>Капельные</li>
-              <li>Комбинированные</li>
+              <li onClick={() => handleTypeClick('Автоматические')}>Автоматические</li>
+              <li onClick={() => handleTypeClick('Капельные')}>Капельные</li>
+              <li onClick={() => handleTypeClick('Комбинированные')}>Комбинированные</li>
             </ul>
           </div>
           <div className="dropdown-column">
             <ul>
-              <li>Рожковые</li>
-              <li>Капсульные</li>
-              <li>Чалдовые</li>
+              <li onClick={() => handleTypeClick('Рожковые')}>Рожковые</li>
+              <li onClick={() => handleTypeClick('Капсульные')}>Капсульные</li>
+              <li onClick={() => handleTypeClick('Чалдовые')}>Чалдовые</li>
             </ul>
           </div>
         </div>
