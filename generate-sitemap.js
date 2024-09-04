@@ -15,61 +15,9 @@ const links = [
   { url: '/type/:typeName', changefreq: 'weekly', priority: 0.7 }, // Динамический путь для типов
 ];
 
-// Добавляем динамические пути для городов, районов и брендов (пример)
-const cities = ['Алабушево', 'Андреевка', 'Апрелевка', 'Балашиха', 'Барвиха',
-'Барыбино', 'Белоозерский', 'Бронницы', 'Быково', 'Верея',
-'Вёшки', 'Видное', 'Владимир', 'Власиха', 'поселок Внуково',
-'Волоколамск', 'Воскресенск', 'Востряково', 'Высоковск', 'Голицыно',
-'Дедовск', 'Дзержинский', 'Дмитров', 'Долгопрудный', 'Домодедово',
-'Дрезна', 'Дубна', 'Егорьевск', 'Жаворонки', 'Железнодорожный',
-'Жуковский', 'Загорянский', 'Запрудня', 'Зарайск', 'Заречье',
-'Звенигород', 'Зеленоград', 'Ивантеевка', 'Икша', 'Ильинский',
-'Истра', 'Калининец', 'Кашира', 'Климоск', 'Клин',
-'Клязьма', 'Коломна', 'Коммунарка', 'Конаково', 'Королёв',
-'Котельники', 'Красково', 'Красноармейск', 'Красногорск', 'Краснозаводск',
-'Краснознаменск', 'Кратово', 'Крёкшино', 'Крюково', 'Кубинка',
-'Купавна', 'Куровское', 'Дикино-Дулёво', 'Лобня', 'Лосино-Петровский',
-'Луговая', 'Луховицы', 'Лыткарино', 'Львовский', 'Люберцы',
-'Малаховка', 'Мамонтовка', 'Михнево', 'Можайск', 'Монино',
-'Московский', 'Мытищи', 'Наро-Фоминск', 'Нахабино', 'Некрасовский',
-'Немчиновка', 'Ногинск', 'Обухово', 'Одинцово', 'Ожерелье',
-'Озёры', 'Опалиха', 'Орехово-Зуево', 'Павловская Слобода', 'Павловский Посад',
-'Пересвет', 'Петровское', 'Пироговский', 'Поварово', 'Подольск',
-'Правдинский', 'Протвино', 'Путилково', 'Пушкино', 'Пущино',
-'Развилка', 'Раменское', 'Рассказовка', 'РАстуново', 'Реутов',
-'Рошаль', 'Руза', 'Румянцево', 'Саларьево', 'Селятино',
-'Сергиев Посад', 'Серпухов', 'Солнечногорск', 'Сосенки', 'Софрино',
-'Старая Купавна', 'Столбовая', 'Ступино', 'Сходня', 'Талдом',
-'Томилино', 'Трёхгорка', 'Троицк', 'Тучково', 'Удельная',
-'Фрязино', 'Фряново', 'Химки', 'Хотьково', 'Черноголовка',
-'Чехов', 'Шатура', 'Щелково', 'Щербинка', 'Электрогорск',
-'Электросталь', 'Электроугли', 'Яхрома'];
-const districts = ['Алексеевский', 'Академический', 'Алтуфьевский', 'Арбат', 'Аэропорт',
-'Бабушкинский', 'Басманный', 'Беговой', 'Бескудниковский', 'Бибирево',
-'Бирюлево Восточное', 'Бирюлево Западное', 'Богородское', 'Братеево',
-'Бутово Северное', 'Бутово Южное', 'Бутырский', 'Вешняки', 'Внуково',
-'Войковский', 'Восточный', 'Выхино-Жулебино', 'Гагаринский', 'Головинский',
-'Гольяново', 'Даниловский', 'Дегунино-Восточное', 'Дегунино-Западное',
-'Дмитровский', 'Донской', 'Дорогомилово', 'Замоскворечье', 'Зюзино',
-'Зябликово', 'Ивановское', 'Измайлово', 'Капотня', 'Коньково', 'Коптево',
-'Косино-Ухтомский', 'Котловка', 'Красносельский', 'Крылатское', 'Крюково',
-'Кузьминки', 'Кунцево', 'Куркино', 'Левобережный', 'Лефортово', 'Лианозово',
-'Ломоносовский', 'Лосиноостровский', 'Люблино', 'Марфино', 'Марьина Роща',
-'Марьино', 'Матюшкино', 'Медведково Северное', 'Медведково Южное',
-'Метрогородок', 'Мещанский', 'Митино', 'Можайский', 'Молжаниновский',
-'Москворечье-Сабурово', 'Нагатино-Садовники', 'Нагатинский Затон', 'Нагорный',
-'Некрасовка', 'Нижегородский', 'Ново-Переделкино', 'Новогиреево',
-'Новокосино', 'Обручевский', 'Орехово-Борисово Северное', 'Орехово-Борисово Южное',
-'Останкинский', 'Отрадное', 'Очаково-Матвеевское', 'Перово', 'Печатники',
-'Покровское-Стрешнево', 'Преображенское', 'Пресненский', 'Проспект Вернадского',
-'Раменки', 'Ростокино', 'Рязанский', 'Савелки', 'Савеловский', 'Свиблово',
-'Северный', 'Силино', 'Сокол', 'Соколиная Гора', 'Сокольники', 'Солнцево',
-'Старое Крюково', 'Строгино', 'Таганский', 'Тверской', 'Текстильщики',
-'Тимирязевский', 'Теплый Стан', 'Тропарево-Никулино', 'Тушино Северное',
-'Тушино Южное', 'Филевский Парк', 'Фили-Давыдково', 'Хамовники', 'Ховрино',
-'Хорошево-Мневники', 'Хорошевский', 'Царицыно', 'Черемушки', 'Чертаново Северное',
-'Чертаново Центральное', 'Чертаново Южное', 'Щукино', 'Южнопортовый', 'Якиманка',
-'Ярославский', 'Ясенево'];
+// Добавляем динамические пути для городов, районов и брендов
+const cities = ['alabushevo', 'andreevka', 'aprelevka', 'balashikha', 'barvikha', 'barybino', 'beloozerskiy', 'bronnitsy', 'bykovo', 'vereya', 'vyoshki', 'vidnoye', 'vladimir', 'vlasiha', 'poselok-vnukovo', 'volokolamsk', 'voskresensk', 'vostryakovo', 'voskresensk', 'golitsyno', 'dedovsk', 'dzerzhinskiy', 'dmitrov', 'dolgoprudnyy', 'domodedovo', 'drezna', 'dubna', 'egorevsk', 'zhavoronki', 'zheleznodorozhnyy', 'zhukovskiy', 'zagoryanskiy', 'zaprudnya', 'zaraysk', 'zarechye', 'zvenigorod', 'zelenograd', 'ivanteyevka', 'iksha', 'ilinskiy', 'istra', 'kalininets', 'kashira', 'klimovsk', 'klin', 'klyazma', 'kolomna', 'kommunarka', 'konakovo', 'korolyov', 'kotelniki', 'kraskovo', 'krasnoarmeysk', 'krasnogorsk', 'krasnozavodsk', 'krasnoznamensk', 'kratovo', 'kryokshino', 'kryukovo', 'kubinka', 'kupavna', 'kurovskoye', 'dikino-dulevo', 'lobnya', 'losino-petrovsky', 'lugovaya', 'lukhovitsy', 'lytkarino', 'lvovskiy', 'lyubertsy', 'malakhovka', 'mamontovka', 'mikhnevo', 'mozhaysk', 'monino', 'moskovskiy', 'mytishchi', 'naro-fominsk', 'nakhabino', 'nekrasovskiy', 'nemchinovka', 'noginsk', 'obukhovo', 'odintsovo', 'ozherelye', 'ozyory', 'opalikha', 'orekhovo-zuyevo', 'pavlovskaya-sloboda', 'pavlovskiy-posad', 'peresvet', 'petrovskoye', 'pirogovskiy', 'povarovo', 'podolsk', 'pravdinskiy', 'protvino', 'putilkovo', 'pushkino', 'pushchino', 'razvilka', 'ramenskoe', 'rasskazovka', 'rastunovo', 'reutov', 'roshal', 'ruza', 'rumyantsevo', 'salaryevo', 'selyatino', 'sergiev-posad', 'serpukhov', 'solnechnogorsk', 'sosenki', 'sofrino', 'staraya-kupavna', 'stolbovaya', 'stupino', 'skhodnya', 'taldom', 'tomilino', 'tryokhgorka', 'troitsk', 'tuchkovo', 'udelnaya', 'fryazino', 'fryanovo', 'khimki', 'khotkovo', 'chernogolovka', 'chekhov', 'shatura', 'shchyolkovo', 'shcherbinka', 'elektrogorsk', 'elektrostal', 'elektroougli', 'yakhroma'];
+const districts = ['alekseevskiy', 'akademicheskiy', 'altufyevskiy', 'arbat', 'aeroport', 'babushkinskiy', 'basmannyy', 'begovoy', 'beskudnikovskiy', 'bibirevo', 'biryulyovo-vostochnoye', 'biryulyovo-zapadnoye', 'bogorodskoe', 'brateevo', 'butovo-severnoye', 'butovo-yuzhnoye', 'butyrskiy', 'veshnyaki', 'vnukovo', 'voykovskiy', 'vostochniy', 'vykhino-zhulebino', 'gagarinskiy', 'golovinskiy', 'goljanovo', 'danilovskiy', 'degunino-vostochnoye', 'degunino-zapadnoye', 'dmitrovskiy', 'donskoy', 'dorogomilovo', 'zamoskvorechye', 'zyuzino', 'zyablikovo', 'ivanovskoye', 'izmaylovo', 'kapotnya', 'konkovo', 'koptevo', 'kosino-ukhtomskiy', 'kotlovka', 'krasnoselskiy', 'krylatskoye', 'kryukovo', 'kuzminki', 'kuntsevo', 'kurkino', 'levoberezhniy', 'lefortovo', 'lianozovo', 'lomonosovskiy', 'losinoostrovskiy', 'lyublino', 'marfino', 'maryina-roshcha', 'maryino', 'matushkino', 'medvedkovo-severnoye', 'medvedkovo-yuzhnoye', 'metrogorodok', 'meshchanskiy', 'mitino', 'mozhayskiy', 'molzhaninovskiy', 'moskvorechye-saburovo', 'nagatino-sadovniki', 'nagatinskiy-zaton', 'nagornyy', 'nekrasovka', 'nizhegorodskiy', 'novo-peredelkino', 'novogireevo', 'novokosino', 'obruchevskiy', 'orekhovo-borisovo-severnoye', 'orekhovo-borisovo-yuzhnoye', 'ostankinskiy', 'otradnoye', 'ochakovo-matveevskoye', 'perovo', 'pechatniki', 'pokrovskoe-streshnevo', 'preobrazhenskoye', 'presnenskiy', 'prospekt-vernadskogo', 'ramenki', 'rostokino', 'ryazanskiy', 'savelyki', 'savyolovskiy', 'sviblovo', 'severniy', 'silino', 'sokol', 'sokolinaya-gora', 'sokolniki', 'solntsevo', 'staroe-kryukovo', 'strogino', 'taganskiy', 'tverskoy', 'tekstilshchiki', 'timiryazevskiy', 'tyoply-stan', 'troparevo-nikulino', 'tushino-severnoye', 'tushino-yuzhnoye', 'filevskiy-park', 'fili-davydkovo', 'khamovniki', 'khovrino', 'khoroshyovo-mnyovniki', 'khoroshevskiy', 'tsaritsyno', 'cheremushki', 'chertanovo-severnoye', 'chertanovo-tsentralnoye', 'chertanovo-yuzhnoye', 'shchukino', 'yuzhnoportovyy', 'yakimanka', 'yaroslavskiy', 'yasenevo'];
 const brands = ["DeLonghi", "Kitfort", "Philips", "Krups", "Nivona", "Melitta", "Polaris", "Saeco", "Bosch", "Jura", "Smeg", "Redmond", "Siemens", "Vitek", "Nespresso", "Xiaomi", "Hibrew", "Miele", "Tuvio", "Garlyn", "Gaggia", "Kaffit-com", "Gorenje", "Pioneer", "Rondell", "Brayer", "Electrolux", "Thomson", "Aeg", "Inhouse", "Maunfeld", "Red-Solution", "KitchenAid", "Beko", "Wacaco", "Centek", "Kuppersbusch", "Dr.Coffee", "Lelit", "Vista", "Oursson", "Ariete", "Neff", "Hyundai", "BQ", "KaringBee", "Nescafe Dolce Gusto", "Caso", "Supra", "Ningbo Rooma Electric", "Grundig", "Caffitaly", "Zelmer", "Russell Hobbs", "JVC", "La Pavoni", "Nuova Simonelli", "Kyvol", "Teka", "GFgril", "Sate", "Viatto", "Normann", "DEXP", "Kuppersberg", "Arcelik", "Asko", "First Austria", "Home&Work", "Franke", "JONR", "Futula", "Sakura", "Zwilling", "Gaggenau", "DSP", "RAF", "Proxima", "Sanremo", "SciShare", "Oulemei", "Rombica", "De Dietrich", "Arzum Okka", "La Marzocco", "Delta", "Sencor", "Gasian", "Breville", "Bravilor Bonamat", "Sage", "Clatronic", "Reoka", "Whirlpool", "FrancisFrancis!", "Leran", "La Cimbali", "Graude", "Bugatti", "Ufesa", "Donlim", "Conti", "Illy", "Gelberk", "Manya", "Hosta Home", "Rise", "Deerma", "Kimbo", "Airhot", "Graef", "Korting", "Geniard", "EKSI", "Weissgauff", "Bertazzoni", "Black+Decker", "Zepter", "Necta", "Aroma", "Fulgor Milano", "KEF", "Solac", "Alvatto", "Cafe Silvestre", "Felfri", "Jacky’s", "Travola", "Kuchenland", "SWAN", "Senix", "VARD", "ADRC Company", "Gemilai", "Proliss", "Catler", "Carrera", "Manifesta", "Saint Coffee", "Agave", "Blaupunkt", "BlitzWolf", "Caffiano", "Dauscher", "MIA", "OubaOloon", "Epeios", "Василиса", "Аксинья", "MasterKofe", "WMF", "BORK", "ENDEVER", "EUPA", "Faber", "FAEMA", "Gastroback", "Gemlux", "Indesit", "Kaffit", "Kambrook", "Kenwood", "La Spaziale", "Laretti", "Panasonic", "Princess", "Rancilio", "Rommelsbacher", "Rowenta", "Spinel", "Thermador", "WOLF", "WPM", "V-ZUG"];
 
 ;
