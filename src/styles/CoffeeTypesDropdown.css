@@ -25,6 +25,7 @@
   .dropdown-button span {
     padding: 10px 20px; 
   }
+  
   .dropdown-content {
     display: none;
     position: absolute; 
@@ -55,4 +56,12 @@
   .dropdown-column li {
     padding: 5px 0; 
     color: #000000;
+    transition: color 0.3s, background-color 0.3s;
   }
+  
+  .dropdown-column li:hover {
+    color: #d41919;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  

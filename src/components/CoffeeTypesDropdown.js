@@ -4,13 +4,25 @@ import '../styles/CoffeeTypesDropdown.css';
 const CoffeeTypesDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const typeTranslations = {
+    'Автоматические': 'automatic',
+    'Капельные': 'drip',
+    'Комбинированные': 'combined',
+    'Рожковые': 'carob',
+    'Капсульные': 'capsule',
+    'Чалдовые': 'pod',
+  };
+
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
   const handleTypeClick = (type) => {
-    const url = `/type/${type.toLowerCase().replace(/\s+/g, '-')}`;
-    window.location.href = url;
+    const translatedType = typeTranslations[type];
+    if (translatedType) {
+      const url = `/type/${translatedType}`;
+      window.location.href = url;
+    }
   };
 
   return (
