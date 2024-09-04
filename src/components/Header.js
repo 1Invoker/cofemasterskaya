@@ -2,6 +2,7 @@ import React, { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
 import CoffeeTypesDropdown from "./CoffeeTypesDropdown";
+import CoffeeMachineIssuesDropdown from "./CoffeeMachineIssuesDropdown";
 
 const Header = forwardRef((props, ref) => {
   return (
@@ -46,6 +47,7 @@ const Header = forwardRef((props, ref) => {
           Контакты
         </a>
         <CoffeeTypesDropdown />
+        <CoffeeMachineIssuesDropdown />
         <a className="nav-link" href="/articles">
           Статьи
         </a>

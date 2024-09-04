@@ -46,9 +46,10 @@ cities.forEach(city => {
 });
 
 const Home = () => {
-  const { cityName, districtName, brandName } = useParams();
+  const { cityName, districtName, brandName, typeName } = useParams();
   const [selectedLocation, setSelectedLocation] = useState('Москве');
   const [selectedBrand, setSelectedBrand] = useState('');
+  const [selectedType, setSelectedType] = useState('');
   const headerRef = useRef(null);
   const footerRef = useRef(null);
 
@@ -64,7 +65,19 @@ const Home = () => {
     if (brandName) {
       setSelectedBrand(brandName.charAt(0).toUpperCase() + brandName.slice(1));
     }
-  }, [cityName, districtName, brandName]);
+    if (typeName) {
+      // Translate typeName back to Russian 
+      const typeTranslations = {
+        'automatic': 'Автоматические',
+        'drip': 'Капельные',
+        'combined': 'Комбинированные',
+        'carob': 'Рожковые',
+        'capsule': 'Капсульные',
+        'pod': 'Чалдовые',
+      };
+      setSelectedType(typeTranslations[typeName] || ''); 
+    }
+  }, [cityName, districtName, brandName, typeName]);
 
   const handleLocationClick = (locationName, locationType) => {
     const slugName = convertToSlug(locationName);
@@ -90,7 +103,7 @@ const Home = () => {
     <>
       <Header ref={headerRef} />
       <div id="hero-section">
-        <HeroSection location={selectedLocation} selectedBrand={selectedBrand} /> 
+        <HeroSection location={selectedLocation} selectedBrand={selectedBrand} selectedType={selectedType}/> 
       </div>
       <div id="services-section">
         <Services />

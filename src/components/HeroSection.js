@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/HeroSection.css";
 import Modal from "./modal";
 
-const HeroSection = ({ location, selectedBrand }) => {
+const HeroSection = ({ location, selectedBrand,selectedType }) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
   const handleButtonClick = () => {
@@ -138,7 +138,9 @@ const HeroSection = ({ location, selectedBrand }) => {
         <p className="hero-subtitle">
           {selectedBrand
             ? `Предоставляем срочные ремонтные услуги для кофемашин ${selectedBrand} - ремонт строго на дому в день обращения. Гарантия по договору.`
-            : "С бесплатной диагностикой и гарантией до 2-х лет"}
+            : selectedType 
+              ? `Предоставляем срочные ремонтные услуги для ${selectedType} кофемашин - ремонт строго на дому в день обращения. Гарантия по договору.`
+              : "С бесплатной диагностикой и гарантией до 2-х лет"}
         </p>
       </div>
 
