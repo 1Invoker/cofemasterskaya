@@ -122,16 +122,16 @@ const CoffeeMachineIssuesDropdown = () => {
   };
 
   const handleIssueClick = (issue) => {
-    navigate(`/?issue=${issue.slug}`);
+    window.location.href = `/issue/${issue.slug}`;
   };
 
   return (
-    <div className="coffee-issues-dropdown" 
-         onMouseEnter={toggleDropdown} 
+    <div className="coffee-issues-dropdown"
+         onMouseEnter={toggleDropdown}
          onMouseLeave={toggleDropdown}
     >
       <div className="dropdown-button">
-      Неисправности кофемашин
+        Неисправности кофемашин
       </div>
       {isOpen && (
         <ul className="dropdown-content">

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/Header.css";
 import CoffeeTypesDropdown from "./CoffeeTypesDropdown";
 import CoffeeMachineIssuesDropdown from "./CoffeeMachineIssuesDropdown";
+import ServicesDropdown from "./ServicesDropdown";
 
 const Header = forwardRef((props, ref) => {
   return (
@@ -46,6 +47,7 @@ const Header = forwardRef((props, ref) => {
         <a className="nav-link" href="#map-section">
           Контакты
         </a>
+        <ServicesDropdown />
         <CoffeeTypesDropdown />
         <CoffeeMachineIssuesDropdown />
         <a className="nav-link" href="/articles">

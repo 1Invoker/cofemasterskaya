@@ -2,7 +2,14 @@ import React, { useState } from "react";
 import "../styles/HeroSection.css";
 import Modal from "./modal";
 
-const HeroSection = ({ location, selectedBrand,selectedType }) => {
+const HeroSection = ({
+  location,
+  selectedBrand,
+  selectedType,
+  selectedIssue,
+  selectedService,
+  issueSlug,
+}) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
   const handleButtonClick = () => {
@@ -12,6 +19,28 @@ const HeroSection = ({ location, selectedBrand,selectedType }) => {
   const closeModal = () => {
     setModalOpen(false);
   };
+
+  const issueTranslations = {
+    "ne-vklyuchaetsya": "не включается",
+    "ne-kachaet-vodu": "не качает воду",
+    "ne-rabotaet-pomol": "не работает помол",
+    "ne-nalivet-kofe": "не наливает кофе",
+    "ne-podaet-penu": "не подает пену",
+    "ne-rabotayut-knopki": "не работают кнопки",
+    "protekaet": "протекает",
+    "ne-nagrevaet-vodu": "не нагревает воду",
+    "ne-vstavlyaetsya-blok": "не вставляется блок",
+    "ne-rabotaet-kapuchinator": "не работает капучинатор",
+    "ne-rabotaet": "не работает",
+    "ne-rabotaet-pompa": "не работает помпа",
+    "ne-varit-kofe": "не варит кофе",
+    "ne-vzbivaet-moloko": "не взбивает молоко",
+    "ne-vidit-vodu": "не видит воду",
+    "ne-vidit-kofe": "не видит кофе",
+    "ne-goryachiy-kofe": "не горячий кофе",
+    "ne-greet": "не греет",
+  };
+
   return (
     <section className="hero-wrapper hero-background">
       <div className="features-wrapper">
@@ -132,15 +161,28 @@ const HeroSection = ({ location, selectedBrand,selectedType }) => {
       </div>
       <div className="hero">
         <h1 className="hero-title">
-          Ремонт кофемашин {selectedBrand ? `бренда ${selectedBrand}` : ""} в{" "}
-          {location} за 2 часа
+          {issueSlug
+            ? `У кофемашины ${issueTranslations[issueSlug]}`
+            : selectedIssue
+            ? `Кофемашина ${selectedIssue.title.toLowerCase()}`
+            : selectedService
+            ? `${selectedService} кофемашины`
+            : `Ремонт кофемашин ${
+                selectedBrand ? `бренда ${selectedBrand}` : ""
+              } в ${location} за 2 часа`}
         </h1>
         <p className="hero-subtitle">
-          {selectedBrand
+          {issueSlug
+            ? "Исправим поломку кофемашины на дому в день обращения! Бесплатная консультация в Москве"
+            : selectedIssue
+            ? "Исправим поломку кофемашины на дому в день обращения! Бесплатная консультация в Москве"
+            : selectedService
+            ? `${selectedService} строго в день обращения с гарантией на выполненные работы. Бесплатная консультация.`
+            : selectedBrand
             ? `Предоставляем срочные ремонтные услуги для кофемашин ${selectedBrand} - ремонт строго на дому в день обращения. Гарантия по договору.`
-            : selectedType 
-              ? `Предоставляем срочные ремонтные услуги для ${selectedType} кофемашин - ремонт строго на дому в день обращения. Гарантия по договору.`
-              : "С бесплатной диагностикой и гарантией до 2-х лет"}
+            : selectedType
+            ? `Предоставляем срочные ремонтные услуги для ${selectedType} кофемашин - ремонт строго на дому в день обращения. Гарантия по договору.`
+            : "С бесплатной диагностикой и гарантией до 2-х лет"}
         </p>
       </div>
 
