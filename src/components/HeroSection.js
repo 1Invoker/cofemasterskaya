@@ -41,6 +41,14 @@ const HeroSection = ({
     "ne-greet": "не греет",
   };
 
+  const getIssuePhraseStart = (issueTitle) => {
+    const femaleWords = ["кнопки", "помпа", "кофемолка","помол", "капучинатор", "горячий кофе"];
+    const isFemale = femaleWords.some((word) =>
+      issueTitle.toLowerCase().includes(word)
+    );
+    return isFemale ? "У кофемашины" : "Кофемашина";
+  };
+
   return (
     <section className="hero-wrapper hero-background">
       <div className="features-wrapper">
@@ -162,9 +170,11 @@ const HeroSection = ({
       <div className="hero">
         <h1 className="hero-title">
           {issueSlug
-            ? `У кофемашины ${issueTranslations[issueSlug]}`
+            ? `${getIssuePhraseStart(issueTranslations[issueSlug])} ${
+                issueTranslations[issueSlug]
+              }`
             : selectedIssue
-            ? `Кофемашина ${selectedIssue.title.toLowerCase()}`
+            ? `${getIssuePhraseStart(selectedIssue.title)} ${selectedIssue.title.toLowerCase()}`
             : selectedService
             ? `${selectedService} кофемашины`
             : `Ремонт кофемашин ${
