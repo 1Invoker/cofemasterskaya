@@ -122,7 +122,7 @@ const CoffeeMachineIssuesDropdown = () => {
   };
 
   const handleIssueClick = (issue) => {
-    window.location.href = `/issue/${issue.slug}`;
+    window.location.href = `/neispravnosti/${issue.slug}`;
   };
 
   return (

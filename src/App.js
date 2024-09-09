@@ -12,9 +12,9 @@ const App = () => {
         <Route path="/brand/:brandName" element={<Home />} />
         <Route path="/district/:districtName" element={<Home />} />
         <Route path="/type/:typeName" element={<Home />} />
-        <Route path="/issue/:issueSlug" element={<Home />} />
+        <Route path="/neispravnosti/:issueSlug" element={<Home />} />
         <Route path="/?service/:serviceSlug" element={<Home />} />
-        <Route path="/issue/" element={<Home />} />
+        <Route path="/neispravnosti/" element={<Home />} />
         <Route path="/city" element={<Home />} />
         <Route path="/district" element={<Home />} /> 
         <Route path="/brand" element={<Home />} /> 

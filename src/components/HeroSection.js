@@ -49,6 +49,25 @@ const HeroSection = ({
     return isFemale ? "У кофемашины" : "Кофемашина";
   };
 
+  const formatMachineType = (type) => {
+    switch (type.toLowerCase()) {
+      case "автоматические":
+        return "Автоматических";
+      case "капельные":
+        return "Капельных";
+      case "комбинированные":
+        return "Комбинированных";
+      case "рожковые":
+        return "Рожковых";
+      case "капсульные":
+        return "Капсульных";
+      case "чалдовые":
+        return "Чалдовых";
+      default:
+        return type.charAt(0).toUpperCase() + type.slice(1);
+    }
+  };
+
   return (
     <section className="hero-wrapper hero-background">
       <div className="features-wrapper">
@@ -168,7 +187,7 @@ const HeroSection = ({
         </div>
       </div>
       <div className="hero">
-        <h1 className="hero-title">
+      <h1 className="hero-title">
           {issueSlug
             ? `${getIssuePhraseStart(issueTranslations[issueSlug])} ${
                 issueTranslations[issueSlug]
@@ -177,6 +196,8 @@ const HeroSection = ({
             ? `${getIssuePhraseStart(selectedIssue.title)} ${selectedIssue.title.toLowerCase()}`
             : selectedService
             ? `${selectedService} кофемашины`
+            : selectedType
+            ? `Ремонт ${formatMachineType(selectedType)} кофемашин`
             : `Ремонт кофемашин ${
                 selectedBrand ? `бренда ${selectedBrand}` : ""
               } в ${location} за 2 часа`}
@@ -191,7 +212,7 @@ const HeroSection = ({
             : selectedBrand
             ? `Предоставляем срочные ремонтные услуги для кофемашин ${selectedBrand} - ремонт строго на дому в день обращения. Гарантия по договору.`
             : selectedType
-            ? `Предоставляем срочные ремонтные услуги для ${selectedType} кофемашин - ремонт строго на дому в день обращения. Гарантия по договору.`
+            ? `Предоставляем срочные ремонтные услуги для ${selectedType.replace(/ые$/, 'ых').replace(/ие$/, 'их')} кофемашин - ремонт строго на дому в день обращения. Гарантия по договору.`
             : "С бесплатной диагностикой и гарантией до 2-х лет"}
         </p>
       </div>

@@ -7,12 +7,12 @@ const baseUrl = 'https://remont-kofemashin-servis.ru';
 const links = [
   { url: '/', changefreq: 'daily', priority: 1.0 },
   { url: '/articles', changefreq: 'daily', priority: 0.8 },
-  { url: '/issue', changefreq: 'weekly', priority: 0.7 },
+  { url: '/neispravnosti', changefreq: 'weekly', priority: 0.7 },
   { url: '/city', changefreq: 'weekly', priority: 0.8 },
   { url: '/district', changefreq: 'weekly', priority: 0.8 },
   { url: '/brand', changefreq: 'weekly', priority: 0.8 },
   { url: '/type', changefreq: 'weekly', priority: 0.7 },
-  { url: '/issue/', changefreq: 'weekly', priority: 0.7 },
+  { url: '/neispravnosti/', changefreq: 'weekly', priority: 0.7 },
 ];
 
 const cities = [
@@ -187,7 +187,7 @@ brands.forEach(brand => {
 });
 
 issues.forEach(issue => {
-  links.push({ url: `/issue/${issue}`, changefreq: 'weekly', priority: 0.7 });
+  links.push({ url: `/neispravnosti/${issue}`, changefreq: 'weekly', priority: 0.7 });
 });
 
 services.forEach(service => {

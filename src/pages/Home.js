@@ -15,6 +15,7 @@ import Testimonials from "../components/Testimonials";
 import CoffeeMachineIssues from "../components/coffeeMachineIssues";
 import CoffeeMachineBrands from "../components/CoffeeMachineBrands";
 import { districts, cities } from "../components/Areas/AreasData";
+import brandNameTranslations from "../components/brandNameTranslations";
 
 const cyrillicToLatinMap = {
   'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'yo', 'ж': 'zh',
@@ -282,15 +283,18 @@ const Home = () => {
     } else if (districtName) {
       title = `Ремонт кофемашин в ${locationNames[districtName]}, Москва`;
     } else if (brandName) {
-      title = `Ремонт кофемашин ${brandName} в Москве`;
+      const formattedBrandName = brandName.charAt(0).toUpperCase() + brandName.slice(1);
+      const russianBrandName = brandNameTranslations[formattedBrandName] || formattedBrandName; 
+
+      title = `Ремонт кофемашин ${formattedBrandName} в Москве | Сервис центр ${russianBrandName}`;
     } else if (typeName) {
       const typeTranslations = {
-        'automatic': 'Автоматические',
-        'drip': 'Капельные',
-        'combined': 'Комбинированные',
-        'carob': 'Рожковые',
-        'capsule': 'Капсульные',
-        'pod': 'Чалдовые',
+        'automatic': 'Автоматических',
+        'drip': 'Капельных',
+        'combined': 'Комбинированных',
+        'carob': 'Рожковых',
+        'capsule': 'Капсульных',
+        'pod': 'Чалдовых',
       };
       title = `Ремонт ${typeTranslations[typeName]} кофемашин в Москве`;
     } else if (issueSlug) {
