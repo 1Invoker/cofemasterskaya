@@ -50,9 +50,6 @@ const Header = forwardRef((props, ref) => {
         <ServicesDropdown />
         <CoffeeTypesDropdown />
         <CoffeeMachineIssuesDropdown />
-        <a className="nav-link" href="/articles">
-          Статьи
-        </a>
       </nav>
     </header>
   );
