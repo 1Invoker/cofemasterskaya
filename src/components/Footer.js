@@ -164,9 +164,15 @@ const Footer = forwardRef((props, ref) => {
           <FooterText>Пн-Пт с 07:00...23:00</FooterText>
           <FooterText>Сб-Вс с 07:00...23:00</FooterText>
           <FooterText>
-            <a href="/karta-saita" target="_blank" rel="noopener noreferrer">
-              Карта сайта
-            </a>
+                  
+<a href="/karta-saita" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   style={{ color: '#e74c3c', textDecoration: 'none', fontWeight:'bold' }}>
+  Карта сайта
+</a>
+
+    
           </FooterText>
         </FooterSection>
       </FooterContentWrapper>
