@@ -1,0 +1,37 @@
+.sitemap-page {
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+    padding: 5px;
+  }
+  
+  .sitemap-page h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .sitemap-page h2 {
+    font-size: 26px;
+    color: #333;
+    margin-top: 15px;
+  }
+  
+  .sitemap-page ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sitemap-page li {
+    margin-bottom: 5px;
+  }
+  
+  .sitemap-page a {
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  
+  .sitemap-page a:hover {
+    text-decoration: underline;
+  }

@@ -120,7 +120,6 @@ const Footer = forwardRef((props, ref) => {
           <FooterNavLink href="#questions-section">Вопрос-ответ</FooterNavLink>
           <FooterNavLink href="#hero-section">О компании</FooterNavLink>
           <FooterNavLink href="#map-section">Контакты</FooterNavLink>
-          <FooterNavLink href="/articles">Статьи</FooterNavLink>
         </FooterNav>
       </FooterNavWrapper>
 
@@ -164,7 +163,11 @@ const Footer = forwardRef((props, ref) => {
           <FooterText>3-й Нижнелихоборский пр., 3, стр. 2, Москва</FooterText>
           <FooterText>Пн-Пт с 07:00...23:00</FooterText>
           <FooterText>Сб-Вс с 07:00...23:00</FooterText>
-          <FooterText><FooterLink href="#">Карта сайта</FooterLink></FooterText>
+          <FooterText>
+            <a href="/karta-saita" target="_blank" rel="noopener noreferrer">
+              Карта сайта
+            </a>
+          </FooterText>
         </FooterSection>
       </FooterContentWrapper>
     </FooterWrapper>

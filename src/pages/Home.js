@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams, useLocation } from "react-router-dom";
+import { Helmet } from 'react-helmet'; 
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import Services from '../components/Services';
@@ -222,6 +223,7 @@ const Home = () => {
   const [selectedService, setSelectedService] = useState(null);
   const headerRef = useRef(null);
   const footerRef = useRef(null);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     if (cityName) {
@@ -269,13 +271,11 @@ const Home = () => {
       setSelectedService(foundService);
     }
 
-    // Логика для selectedIssue, если нужно 
     if (issueSlug) {
       const foundIssue = coffeeMachineIssues.find(issue => issue.slug === issueSlug);
       setSelectedIssue(foundIssue);
     }
 
-    // Логика для установки title страницы
     let title = "Сервисный центр по ремонту кофемашин по Москве и МО";
 
     if (cityName) {
@@ -328,8 +328,13 @@ const Home = () => {
     window.location.href = url;
   };
 
+  const canonicalUrl = `https://remont-kofemashin-servis.ru${pathname}`;
+
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href={canonicalUrl} />
+      </Helmet>
       <Header ref={headerRef} />
       <div id="hero-section">
         <HeroSection 

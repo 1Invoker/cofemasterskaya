@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import GlobalStyle from './styles/GlobalStyle';
 import ArticlesPage from './pages/ArticlesPage';
+import SitemapPage from './pages/SitemapPage';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/type/:typeName" element={<Home />} />
         <Route path="/neispravnosti/:issueSlug" element={<Home />} />
         <Route path="/?service/:serviceSlug" element={<Home />} />
+        <Route path="/karta-saita" element={<SitemapPage />} />
         <Route path="/neispravnosti/" element={<Home />} />
         <Route path="/city" element={<Home />} />
         <Route path="/district" element={<Home />} /> 

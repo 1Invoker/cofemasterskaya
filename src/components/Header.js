@@ -26,7 +26,7 @@ const Header = forwardRef((props, ref) => {
       </div>
       <div className="logo-tagline">Ремонт кофемашин</div>
       <nav className="nav">
-        <a className="nav-link" href="#hero-section">
+        <a className="nav-link" href="#services-section">
           Частые поломки
         </a>
         <a className="nav-link" href="#repair-cost-section">
@@ -50,6 +50,9 @@ const Header = forwardRef((props, ref) => {
         <ServicesDropdown />
         <CoffeeTypesDropdown />
         <CoffeeMachineIssuesDropdown />
+        <a className="nav-link" href="/articles"> 
+          Статьи
+        </a>
       </nav>
     </header>
   );
