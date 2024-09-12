@@ -3,6 +3,11 @@ import Home from './pages/Home';
 import GlobalStyle from './styles/GlobalStyle';
 import ArticlesPage from './pages/ArticlesPage';
 import SitemapPage from './pages/SitemapPage';
+import BrandPage from './pages/BrandPage';
+import AreasPage from './pages/AreasPage';
+import CityPage from './pages/CityPage';
+import DistrictPage from './pages/DistrictPage';
+import TypePage from './components/TypePage';
 
 const App = () => {
   return (
@@ -17,10 +22,10 @@ const App = () => {
         <Route path="/?service/:serviceSlug" element={<Home />} />
         <Route path="/karta-saita" element={<SitemapPage />} />
         <Route path="/neispravnosti/" element={<Home />} />
-        <Route path="/city" element={<Home />} />
-        <Route path="/district" element={<Home />} /> 
-        <Route path="/brand" element={<Home />} /> 
-        <Route path="/type" element={<Home />} /> 
+        <Route path="/city" element={<CityPage />} />
+        <Route path="/district" element={<DistrictPage />} /> 
+        <Route path="/brand" element={<BrandPage />} /> 
+        <Route path="/type" element={<TypePage />} /> 
         <Route path="/articles" element={<ArticlesPage />} />
         <Route path="/" element={<Home />} />   
       </Routes>
