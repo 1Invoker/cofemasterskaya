@@ -275,7 +275,7 @@ const SitemapPage = () => {
             <ul>
               {allServices.map((service) => (
                 <li key={service}>
-                  <a href={`/?service=${convertToSlug(service)}`}>{service}</a>
+                  <a href={`/service/${convertToSlug(service)}`}>{service}</a>
                 </li>
               ))}
             </ul>

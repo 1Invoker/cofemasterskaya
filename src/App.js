@@ -19,7 +19,7 @@ const App = () => {
         <Route path="/district/:districtName" element={<Home />} />
         <Route path="/type/:typeName" element={<Home />} />
         <Route path="/neispravnosti/:issueSlug" element={<Home />} />
-        <Route path="/?service/:serviceSlug" element={<Home />} />
+        <Route path="/service/:serviceSlug" element={<Home />} />
         <Route path="/karta-saita" element={<SitemapPage />} />
         <Route path="/neispravnosti/" element={<Home />} />
         <Route path="/city" element={<CityPage />} />

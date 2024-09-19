@@ -212,10 +212,7 @@ const allServices = [
 ];
 
 const Home = () => {
-  const [searchParams] = useSearchParams();
-  const selectedServiceSlug = searchParams.get('service');
-
-  const { cityName, districtName, brandName, typeName, issueSlug } = useParams();
+  const { serviceSlug, cityName, districtName, brandName, typeName, issueSlug } = useParams();
   const [selectedLocation, setSelectedLocation] = useState('Москве');
   const [selectedBrand, setSelectedBrand] = useState('');
   const [selectedType, setSelectedType] = useState('');
@@ -250,7 +247,7 @@ const Home = () => {
       setSelectedType(typeTranslations[typeName] || '');
     }
 
-    if (selectedServiceSlug) {
+    if (serviceSlug) {
       const translit = {
         'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'yo', 'ж': 'zh',
         'з': 'z', 'и': 'i', 'й': 'y', 'к': 'k', 'л': 'l', 'м': 'm', 'н': 'n', 'о': 'o',
@@ -259,14 +256,14 @@ const Home = () => {
         'ъ': '', 'ь': ''
       };
       const foundService = allServices.find(service => {
-        const serviceSlug = service
+        const slug = service
           .toLowerCase()
           .split('')
           .map(char => translit[char] || char)
           .join('')
           .replace(/ /g, '-')
           .replace(/[^a-z0-9-]+/g, '');
-        return serviceSlug === selectedServiceSlug;
+        return slug === serviceSlug;
       });
       setSelectedService(foundService);
     }
@@ -299,14 +296,14 @@ const Home = () => {
       title = `Ремонт ${typeTranslations[typeName]} кофемашин в Москве`;
     } else if (issueSlug) {
       const foundIssue = coffeeMachineIssues.find(issue => issue.slug === issueSlug);
-      title = `Кофемашина ${foundIssue ? foundIssue.title.toLowerCase() : ''} - ремонт в Москве`;
-    } else if (selectedServiceSlug) {
-      title = `${selectedService ? selectedService : ''} кофемашины - ремонт в Москве`;
+      title = `Кофемашина ${foundIssue ? foundIssue.title.toLowerCase() : ''} | Сервис центр`;
+    } else if (serviceSlug) {
+      title = `${selectedService ? selectedService : ''} кофемашины | Сервис центр`;
     }
 
     document.title = title;
 
-  }, [cityName, districtName, brandName, typeName, selectedServiceSlug, issueSlug, selectedService]);
+  }, [cityName, districtName, brandName, typeName, serviceSlug, issueSlug, selectedService]);
 
   const handleLocationClick = (locationName, locationType) => {
     const slugName = convertToSlug(locationName);

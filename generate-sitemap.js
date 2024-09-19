@@ -191,7 +191,7 @@ issues.forEach(issue => {
 });
 
 services.forEach(service => {
-  links.push({ url: `/?service=${service}`, changefreq: 'weekly', priority: 0.7 });
+  links.push({ url: `/service/${service}`, changefreq: 'weekly', priority: 0.7 });
 });
 
 const typeNames = ['automatic', 'drip', 'combined', 'carob', 'capsule', 'pod'];

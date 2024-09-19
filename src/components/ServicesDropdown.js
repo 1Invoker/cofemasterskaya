@@ -82,7 +82,7 @@ const ServicesDropdown = () => {
       .replace(/ /g, '-')
       .replace(/[^a-z0-9-]+/g, '');
   
-    window.location.href = `/?service=${slug}`;
+    window.location.href = `/service/${slug}`;
   };
 
   return (
